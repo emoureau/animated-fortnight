@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Design reference exported from the Design canvas. Inline hex values map to design-system tokens: see docs/design-rules.md. Not production code. -->
+<meta charset="utf-8">
+<title>AI-1 · Research assistant in the note</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#14181d}
+a{color:#64a4ee}a:hover{color:#9bc4f4}
+button,input,textarea,select{font:inherit}
+input::placeholder,textarea::placeholder{color:#9aa0a8}
+:focus-visible{outline:2px solid #64a4ee;outline-offset:2px}
+</style>
+<div style="min-height: 1040px; width: 100%; box-sizing: border-box; background: #14181d; color: #e5e8eb; font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; font-size: 14px; line-height: 20px; display: flex; flex-direction: column">
+
+<!-- App bar -->
+<header style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 10px 16px; border-bottom: 1px solid #25292f; background: #14181d">
+  <div style="display: flex; align-items: center; gap: 10px">
+    <span aria-hidden="true" style="width: 28px; height: 28px; border-radius: 6px; background: #41bde6; display: block"></span>
+    <span style="font-weight: 600; color: #f9fafb">[App name]</span>
+  </div>
+  <nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 6px; color: #9aa0a8">
+    <a href="#" style="color: #d0d4d9; text-decoration: none">Harlow Inlet shoreline study</a><span aria-hidden="true">/</span>
+    <span style="color: #f9fafb">Drivers of north-spit retreat</span>
+  </nav>
+  <label style="flex: 1 1 320px; max-width: 520px; margin-left: auto; display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 10px; box-sizing: border-box; border: 1px solid #6d737c; border-radius: 6px; background: #25292f; color: #9aa0a8">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+    <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search everything</span>
+    <input type="search" placeholder="Search, or describe what you’re looking for" style="flex: 1; min-width: 0; background: transparent; border: 0; color: #e5e8eb; font-size: 14px">
+    <kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #d0d4d9; border: 1px solid #3c4148; border-radius: 4px; padding: 0 6px">⌘K</kbd>
+  </label>
+  <div style="display: flex; align-items: center; gap: 8px; margin-left: auto">
+    <span title="Daniel Reyes" style="width: 28px; height: 28px; border-radius: 999px; background: oklch(84.1% 0.238 128.85); color: #14181d; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center">DR</span>
+    <button type="button" aria-pressed="true" style="height: 32px; padding: 0 12px; border-radius: 6px; border: 1px solid oklch(70.2% 0.183 293.541); background: oklch(70.2% 0.183 293.541 / 0.16); color: oklch(81.1% 0.111 293.571); font-weight: 500; display: flex; align-items: center; gap: 6px; cursor: pointer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"></path><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></svg>
+      Assistant</button>
+  </div>
+</header>
+
+<div style="display: flex; flex-wrap: wrap; flex: 1; min-height: 0">
+
+<!-- Editor -->
+<main style="flex: 999 1 600px; min-width: 0; display: flex; flex-direction: column">
+  <div role="toolbar" aria-label="Formatting" style="display: flex; align-items: center; gap: 4px; flex-wrap: wrap; padding: 8px 16px; border-bottom: 1px solid #25292f">
+    <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 1px solid #3c4148; background: transparent; color: #e5e8eb; cursor: pointer">Heading 2</button>
+    <button type="button" aria-label="Bold" style="width: 32px; height: 32px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; font-weight: 600; cursor: pointer">B</button>
+    <button type="button" aria-label="Italic" style="width: 32px; height: 32px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; font-style: italic; cursor: pointer">I</button>
+    <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 0; background: transparent; color: #5fcaea; font-weight: 500; cursor: pointer">Cite record</button>
+    <span style="margin-left: auto; display: flex; align-items: center; gap: 8px; color: #9aa0a8">
+      <span style="display: inline-flex; align-items: center; gap: 4px; padding: 0 8px; border-radius: 999px; background: oklch(70.2% 0.183 293.541 / 0.16); color: oklch(81.1% 0.111 293.571); font-size: 12px">1 suggestion pending</span>
+      Saved · just now
+    </span>
+  </div>
+
+  <article style="max-width: 70ch; width: 100%; box-sizing: content-box; margin: 0 auto; padding: 36px 32px 64px; font-size: 18px; line-height: 30px; color: #e5e8eb">
+    <h1 style="margin: 0 0 24px; font-size: 32px; line-height: 40px; font-weight: 600; letter-spacing: -0.01em; color: #f9fafb">Drivers of north-spit retreat, 1962–2019</h1>
+
+    <h2 style="margin: 0 0 8px; font-size: 22px; line-height: 30px; font-weight: 600; color: #f9fafb">1. Channel dredging</h2>
+    <p style="margin: 0 0 4px">The earliest aerial coverage shows a continuous spit
+      <a href="#" style="display: inline-flex; padding: 0 6px; border-radius: 4px; border: 1px solid rgba(95,202,234,0.35); background: rgba(95,202,234,0.12); color: #5fcaea; font-size: 15px; line-height: 24px; text-decoration: none">Aerial photograph, 1962</a>.
+      <span style="background: oklch(85.5% 0.138 181.071 / 0.22); border-radius: 2px; color: #f9fafb">The inner edge retreated after the channel was deepened.</span></p>
+
+    <!-- Selection toolbar: ask the assistant about selected text -->
+    <div style="position: relative; height: 0">
+      <div role="menu" aria-label="Ask about selected text" style="position: absolute; top: 2px; left: 140px; z-index: 2; display: flex; gap: 2px; padding: 4px; background: #25292f; border: 1px solid #3c4148; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.45); font-size: 13px; line-height: 18px">
+        <button type="button" role="menuitem" style="height: 30px; padding: 0 10px; border-radius: 6px; border: 0; background: #3c4148; color: #f9fafb; cursor: pointer">Find supporting records</button>
+        <button type="button" role="menuitem" style="height: 30px; padding: 0 10px; border-radius: 6px; border: 0; background: transparent; color: #e5e8eb; cursor: pointer">Find contradicting</button>
+        <button type="button" role="menuitem" style="height: 30px; padding: 0 10px; border-radius: 6px; border: 0; background: transparent; color: #e5e8eb; cursor: pointer">Check my citation</button>
+      </div>
+    </div>
+    <p style="margin: 48px 0 28px; font-size: 14px; line-height: 20px; color: #9aa0a8">&nbsp;</p>
+
+    <h2 style="margin: 0 0 8px; font-size: 22px; line-height: 30px; font-weight: 600; color: #f9fafb">2. Storm overwash</h2>
+
+    <!-- AI suggestion block -->
+    <section aria-label="Suggested paragraph from the assistant" style="border: 1px dashed oklch(70.2% 0.183 293.541); border-radius: 8px; background: oklch(70.2% 0.183 293.541 / 0.07); overflow: hidden">
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 8px 12px; border-bottom: 1px solid #3c4148; font-size: 13px; line-height: 18px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="oklch(70.2% 0.183 293.541)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"></path></svg>
+        <span style="color: oklch(81.1% 0.111 293.571); font-weight: 500">Suggested draft</span>
+        <span style="color: #d0d4d9">from 3 records in “Storm events” · not yet in the note</span>
+      </div>
+      <div style="padding: 12px 14px">
+        <p style="margin: 0">Field crews recorded overwash across the spit’s narrowest section after the October 1991 nor’easter
+          <a href="#" style="display: inline-flex; padding: 0 6px; border-radius: 4px; border: 1px solid rgba(95,202,234,0.35); background: rgba(95,202,234,0.12); color: #5fcaea; font-size: 15px; line-height: 24px; text-decoration: none">Field report, 1991 · p. 4</a>.
+          Oblique photographs taken the following week show overwash fans in the same location
+          <a href="#" style="display: inline-flex; padding: 0 6px; border-radius: 4px; border: 1px solid rgba(95,202,234,0.35); background: rgba(95,202,234,0.12); color: #5fcaea; font-size: 15px; line-height: 24px; text-decoration: none">Oblique photos, 1991 · frames 7–11</a>.
+          <span style="text-decoration: underline wavy #fabc00; text-underline-offset: 5px">Repeated overwash at this point likely weakened the dune line for later storms.</span>
+          <span style="display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; background: rgba(250,188,0,0.12); color: #fabc00; font-size: 12px; line-height: 20px; vertical-align: 2px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3z"></path><path d="M12 10v4M12 17v.5"></path></svg>No source: inference</span></p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 8px 12px; border-top: 1px solid #3c4148; background: #14181d; font-size: 14px; line-height: 20px">
+        <button type="button" style="height: 32px; padding: 0 12px; border-radius: 6px; border: 0; background: #64a4ee; color: #14181d; font-weight: 500; cursor: pointer">Insert</button>
+        <button type="button" style="height: 32px; padding: 0 12px; border-radius: 6px; border: 1px solid #6d737c; background: transparent; color: #e5e8eb; cursor: pointer">Insert without unsourced sentence</button>
+        <button type="button" style="height: 32px; padding: 0 12px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; cursor: pointer">Discard</button>
+        <span style="margin-left: auto; font-size: 12px; color: #9aa0a8">Inserted text is marked “AI-drafted” until someone edits it</span>
+      </div>
+    </section>
+  </article>
+</main>
+
+<!-- Assistant panel -->
+<aside aria-label="Research assistant" style="flex: 0 1 420px; min-width: 320px; background: #25292f; border-left: 1px solid #3c4148; box-sizing: border-box; display: flex; flex-direction: column">
+  <div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid #3c4148">
+    <h2 style="margin: 0; flex: 1; font-size: 16px; line-height: 24px; font-weight: 600; color: #f9fafb">Research assistant</h2>
+    <span style="font-size: 12px; color: #9aa0a8">Only you see this chat</span>
+  </div>
+
+  <div style="flex: 1; padding: 16px; display: flex; flex-direction: column; gap: 14px">
+    <!-- User turn -->
+    <div style="align-self: flex-end; max-width: 85%; padding: 10px 12px; border-radius: 8px; background: #3c4148; color: #f9fafb">Draft a paragraph on storm overwash using the Storm events folder.</div>
+
+    <!-- Assistant turn -->
+    <div style="display: flex; flex-direction: column; gap: 10px; color: #e5e8eb">
+      <p style="margin: 0">I put a suggested paragraph in section 2. Two sentences are backed by records; one is my inference and has no source.</p>
+      <div style="border: 1px solid #3c4148; border-radius: 8px; background: #14181d; overflow: hidden">
+        <div style="padding: 8px 10px; border-bottom: 1px solid #25292f; font-size: 12px; font-weight: 500; color: #d0d4d9">What I read</div>
+        <ul style="list-style: none; margin: 0; padding: 4px 0">
+          <li style="display: flex; gap: 8px; align-items: flex-start; padding: 6px 10px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#21d195" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M5 12l5 5L20 7"></path></svg>
+            <span><span style="display: block; color: #f9fafb">Field report, 1991</span><span style="font-size: 12px; color: #9aa0a8">Full text (from scanned pages)</span></span></li>
+          <li style="display: flex; gap: 8px; align-items: flex-start; padding: 6px 10px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#21d195" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M5 12l5 5L20 7"></path></svg>
+            <span><span style="display: block; color: #f9fafb">Oblique photos, 1991</span><span style="font-size: 12px; color: #9aa0a8">Images and their captions</span></span></li>
+          <li style="display: flex; gap: 8px; align-items: flex-start; padding: 6px 10px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fabc00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16v.5"></path></svg>
+            <span><span style="display: block; color: #f9fafb">Overwash extent map, 1992</span><span style="font-size: 12px; color: #9aa0a8">Catalog description only. The GIS file can’t be opened here, so I didn’t cite it.</span></span></li>
+        </ul>
+      </div>
+      <div style="padding: 10px 12px; border-radius: 8px; background: rgba(250,188,0,0.08); border: 1px solid #3c4148; display: flex; flex-direction: column; gap: 8px">
+        <span style="color: #e5e8eb"><span style="color: #fabc00; font-weight: 500">Gap:</span> nothing in your bin covers 1992–1995. The catalog may have more.</span>
+        <button type="button" style="align-self: flex-start; height: 30px; padding: 0 10px; border-radius: 6px; border: 1px solid #6d737c; background: transparent; color: #e5e8eb; cursor: pointer">Search catalog for 1992–1995 overwash</button>
+      </div>
+    </div>
+
+    <!-- User turn 2 -->
+    <div style="align-self: flex-end; max-width: 85%; padding: 10px 12px; border-radius: 8px; background: #3c4148; color: #f9fafb">Anything that contradicts the dredging claim I highlighted?</div>
+
+    <!-- Assistant turn 2 -->
+    <div style="display: flex; flex-direction: column; gap: 8px; color: #e5e8eb">
+      <p style="margin: 0">One record in your bin and one from the wider catalog:</p>
+      <div style="border: 1px solid #3c4148; border-radius: 8px; background: #14181d; padding: 10px; display: flex; flex-direction: column; gap: 6px">
+        <span style="display: flex; align-items: center; gap: 8px"><span style="flex: 1; color: #f9fafb; font-weight: 500">Oral history: harbor pilot, 2004</span><span style="padding: 0 6px; border-radius: 4px; border: 1px solid #3c4148; color: #d0d4d9; font-size: 12px">In bin</span></span>
+        <span style="font-size: 13px; color: #d0d4d9">Transcript at 00:14:32: pilot says erosion began before the dredging.</span>
+        <span style="display: flex; gap: 6px"><button type="button" style="height: 28px; padding: 0 10px; border-radius: 6px; border: 1px solid #6d737c; background: transparent; color: #e5e8eb; font-size: 12px; cursor: pointer">Cite here</button><button type="button" style="height: 28px; padding: 0 10px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; font-size: 12px; cursor: pointer">Open</button></span>
+      </div>
+      <div style="border: 1px solid #3c4148; border-radius: 8px; background: #14181d; padding: 10px; display: flex; flex-direction: column; gap: 6px">
+        <span style="display: flex; align-items: center; gap: 8px"><span style="flex: 1; color: #f9fafb; font-weight: 500">Shoreline change rates, 1950–1980</span><span style="display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; border: 1px solid #3c4148; color: #d0d4d9; font-size: 12px">Catalog · .xlsx</span></span>
+        <span style="font-size: 13px; color: #d0d4d9">Catalog description mentions inner-edge retreat in the 1970s. I couldn’t open the spreadsheet to confirm.</span>
+        <span style="display: flex; gap: 6px"><button type="button" style="height: 28px; padding: 0 10px; border-radius: 6px; border: 1px solid #6d737c; background: transparent; color: #e5e8eb; font-size: 12px; cursor: pointer">Add to bin</button></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Composer -->
+  <div style="padding: 12px 16px 16px; border-top: 1px solid #3c4148; display: flex; flex-direction: column; gap: 8px">
+    <div style="display: flex; gap: 6px; flex-wrap: wrap">
+      <span style="font-size: 12px; color: #9aa0a8; align-self: center">Look in:</span>
+      <button type="button" aria-pressed="true" style="height: 26px; padding: 0 8px; border-radius: 999px; border: 0; background: #3c4148; color: #f9fafb; font-size: 12px; cursor: pointer">This project’s bin</button>
+      <button type="button" aria-pressed="true" style="height: 26px; padding: 0 8px; border-radius: 999px; border: 0; background: #3c4148; color: #f9fafb; font-size: 12px; cursor: pointer">Whole catalog</button>
+      <button type="button" aria-pressed="false" style="height: 26px; padding: 0 8px; border-radius: 999px; border: 1px solid #3c4148; background: transparent; color: #d0d4d9; font-size: 12px; cursor: pointer">Team notes</button>
+    </div>
+    <label style="display: flex; align-items: flex-end; gap: 8px; padding: 8px; border: 1px solid #6d737c; border-radius: 8px; background: #14181d">
+      <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Ask the assistant</span>
+      <textarea rows="2" placeholder="Ask, or type @ to point at a record" style="flex: 1; resize: none; border: 0; background: transparent; color: #e5e8eb; font-size: 14px; line-height: 20px"></textarea>
+      <button type="button" aria-label="Send" style="width: 32px; height: 32px; border-radius: 6px; border: 0; background: #64a4ee; color: #14181d; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+    </label>
+    <span style="font-size: 12px; color: #9aa0a8">The assistant can be wrong. Check citations before you publish.</span>
+  </div>
+</aside>
+
+</div>
+</div>
+</body>
+</html>

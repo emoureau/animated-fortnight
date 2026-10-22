@@ -1,0 +1,104 @@
+[
+  {
+    "id": "cit_01",
+    "recordId": "r_aerial1962",
+    "locator": {
+      "kind": "whole",
+      "label": "Whole record"
+    },
+    "createdBy": "u_maya"
+  },
+  {
+    "id": "cit_02",
+    "recordId": "r_profiles1978",
+    "locator": {
+      "kind": "page",
+      "label": "p. 12",
+      "page": 12,
+      "region": {
+        "x": 0.08,
+        "y": 0.31,
+        "w": 0.84,
+        "h": 0.12
+      }
+    },
+    "createdBy": "u_you"
+  },
+  {
+    "id": "cit_03",
+    "recordId": "r_permit1985",
+    "locator": {
+      "kind": "page",
+      "label": "p. 3",
+      "page": 3
+    },
+    "createdBy": "u_daniel"
+  },
+  {
+    "id": "cit_04",
+    "recordId": "r_stormreport1991",
+    "locator": {
+      "kind": "page",
+      "label": "p. 4",
+      "page": 4
+    },
+    "createdBy": "u_daniel"
+  },
+  {
+    "id": "cit_05",
+    "recordId": "r_shoreline",
+    "locator": {
+      "kind": "layer",
+      "label": "layer inner_edge · years 1962, 1987, 2019",
+      "file": "inner_edge.shp"
+    },
+    "snippetIds": [
+      "snp_inneredge"
+    ],
+    "createdBy": "u_maya"
+  },
+  {
+    "id": "cit_06",
+    "recordId": "r_minutes1985",
+    "locator": {
+      "kind": "url-section",
+      "label": "item 7"
+    },
+    "snapshotAt": "2026-10-02T13:05:00Z",
+    "createdBy": "u_daniel"
+  },
+  {
+    "id": "cit_07",
+    "recordId": "r_margin1987",
+    "locator": {
+      "kind": "file",
+      "label": "line_14.xyz · rows 1,200–1,450",
+      "file": "line_14.xyz",
+      "rows": "1200-1450"
+    },
+    "snippetIds": [
+      "snp_line14"
+    ],
+    "createdBy": "u_daniel"
+  },
+  {
+    "id": "cit_08",
+    "recordId": "r_oralhistory",
+    "locator": {
+      "kind": "timestamp",
+      "label": "00:14:32",
+      "startSec": 872
+    },
+    "createdBy": "u_you"
+  },
+  {
+    "id": "cit_09",
+    "recordId": "r_logbooks",
+    "locator": {
+      "kind": "box",
+      "label": "box 14 · 1991 volume"
+    },
+    "verified": false,
+    "createdBy": "u_you"
+  }
+]

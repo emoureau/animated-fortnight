@@ -1,0 +1,58 @@
+{
+  "name": "granite",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "typecheck": "nuxt typecheck && tsc --noEmit -p tsconfig.test.json",
+    "test:unit": "vitest run --project unit --project nuxt",
+    "test:api": "vitest run --project api",
+    "test:unit:watch": "vitest --project unit --project nuxt",
+    "test:coverage": "vitest run --project unit --project nuxt --coverage",
+    "test:e2e": "playwright test",
+    "test": "npm run test:unit && npm run test:api && npm run test:e2e",
+    "ci": "npm run lint && npm run typecheck && npm run test:coverage && npm run test:api && npm run test:e2e"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^4.11.0",
+    "@tiptap/core": "3.31.4",
+    "@tiptap/pm": "3.31.4",
+    "@tiptap/suggestion": "3.31.4",
+    "@tiptap/vue-3": "3.31.4",
+    "nuxt": "^4.6.0",
+    "tailwindcss": "^4.3.3",
+    "vue": "^3.5.41",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.3.0",
+    "@axe-core/playwright": "4.14.0",
+    "@iconify-json/mdi": "^1.2.3",
+    "@nuxt/test-utils": "^4.1.0",
+    "@playwright/test": "^1.62.1",
+    "@testing-library/vue": "^8.1.0",
+    "@vitest/coverage-istanbul": "^4.1.11",
+    "@vue/test-utils": "^2.4.11",
+    "eslint": "^10.9.0",
+    "happy-dom": "^20.11.6",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.11",
+    "vue-tsc": "^3.3.11"
+  },
+  "allowScripts": {
+    "vue-demi@0.14.10": true,
+    "esbuild@0.28.2": true,
+    "esbuild@0.27.2": true,
+    "esbuild@0.27.7": true
+  }
+}

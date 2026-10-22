@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Design reference exported from the Design canvas. Inline hex values map to design-system tokens: see docs/design-rules.md. Not production code. -->
+<meta charset="utf-8">
+<title>A · Shared note</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#14181d}
+a{color:#64a4ee}a:hover{color:#9bc4f4}
+button,input,textarea,select{font:inherit}
+input::placeholder,textarea::placeholder{color:#9aa0a8}
+:focus-visible{outline:2px solid #64a4ee;outline-offset:2px}
+</style>
+<div style="min-height: 1040px; width: 100%; box-sizing: border-box; background: #14181d; color: #e5e8eb; font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; font-size: 14px; line-height: 20px; display: flex; flex-direction: column">
+
+<!-- App bar -->
+<header style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 10px 16px; border-bottom: 1px solid #25292f; background: #14181d">
+  <div style="display: flex; align-items: center; gap: 10px">
+    <span aria-hidden="true" style="width: 28px; height: 28px; border-radius: 6px; background: #41bde6; display: block"></span>
+    <span style="font-weight: 600; color: #f9fafb">[App name]</span>
+  </div>
+  <nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 6px; color: #9aa0a8">
+    <a href="#" style="color: #d0d4d9; text-decoration: none">Projects</a><span aria-hidden="true">/</span>
+    <a href="#" style="color: #d0d4d9; text-decoration: none">Harlow Inlet shoreline study</a><span aria-hidden="true">/</span>
+    <span style="color: #f9fafb">Notes</span>
+  </nav>
+  <label style="flex: 1 1 320px; max-width: 560px; margin-left: auto; display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 10px; box-sizing: border-box; border: 1px solid #6d737c; border-radius: 6px; background: #25292f; color: #9aa0a8">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+    <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search everything</span>
+    <input type="search" placeholder="Search projects, notes and the catalog" style="flex: 1; min-width: 0; background: transparent; border: 0; color: #e5e8eb; font-size: 14px">
+    <kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #d0d4d9; border: 1px solid #3c4148; border-radius: 4px; padding: 0 6px">⌘K</kbd>
+  </label>
+  <div style="display: flex; align-items: center; gap: 12px; margin-left: auto">
+    <div aria-label="4 people in this note" style="display: flex">
+      <span title="Maya Okafor" style="width: 28px; height: 28px; border-radius: 999px; background: oklch(83.7% 0.128 66.29); color: #14181d; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #14181d">MO</span>
+      <span title="Daniel Reyes" style="width: 28px; height: 28px; border-radius: 999px; background: oklch(84.1% 0.238 128.85); color: #14181d; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #14181d; margin-left: -8px">DR</span>
+      <span title="Priya Natarajan" style="width: 28px; height: 28px; border-radius: 999px; background: oklch(71.8% 0.202 349.761); color: #14181d; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #14181d; margin-left: -8px">PN</span>
+      <span title="You" style="width: 28px; height: 28px; border-radius: 999px; background: oklch(85.5% 0.138 181.071); color: #14181d; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #14181d; margin-left: -8px">You</span>
+    </div>
+    <button type="button" style="height: 32px; padding: 0 12px; border-radius: 6px; border: 0; background: #64a4ee; color: #14181d; font-weight: 500; display: flex; align-items: center; gap: 6px; cursor: pointer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"></circle><path d="M3 20c0-3 3-5 6-5s6 2 6 5"></path><path d="M16 5a3 3 0 0 1 0 6"></path><path d="M18 15c2 .5 3 2.5 3 5"></path></svg>
+      Share
+    </button>
+  </div>
+</header>
+
+<div style="display: flex; flex-wrap: wrap; flex: 1; min-height: 0">
+
+<!-- Left: vault / note tree (Obsidian-like) -->
+<aside aria-label="Project notes" style="flex: 0 1 264px; min-width: 220px; background: #25292f; border-right: 1px solid #3c4148; padding: 16px 12px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+  <button type="button" style="display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; padding: 8px; border-radius: 6px; border: 1px solid #3c4148; background: #14181d; color: #f9fafb; cursor: pointer">
+    <span aria-hidden="true" style="width: 28px; height: 28px; border-radius: 6px; background: #3c4148; color: #f9fafb; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 12px">HI</span>
+    <span style="flex: 1; min-width: 0">
+      <span style="display: block; font-weight: 500">Harlow Inlet shoreline study</span>
+      <span style="display: block; font-size: 12px; color: #9aa0a8">Team project · 4 members</span>
+    </span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9aa0a8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 9l4-4 4 4M8 15l4 4 4-4"></path></svg>
+  </button>
+
+  <div style="display: flex; flex-direction: column; gap: 2px">
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 8px 6px">
+      <span style="font-size: 12px; font-weight: 500; color: #9aa0a8">Notes</span>
+      <button type="button" aria-label="New note" style="width: 28px; height: 28px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; padding: 6px 8px; color: #d0d4d9">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9aa0a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9aa0a8" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path></svg>
+      Literature review
+    </div>
+    <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 6px 8px 6px 46px; border-radius: 6px; color: #d0d4d9; text-decoration: none">Prior shoreline studies</a>
+    <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 6px 8px 6px 46px; border-radius: 6px; color: #d0d4d9; text-decoration: none">Dredging history</a>
+    <div style="display: flex; align-items: center; gap: 8px; padding: 6px 8px; color: #d0d4d9">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9aa0a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9aa0a8" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path></svg>
+      Analysis
+    </div>
+    <a href="#" aria-current="page" style="display: flex; align-items: center; gap: 8px; padding: 6px 8px 6px 46px; border-radius: 6px; background: #3c4148; color: #f9fafb; font-weight: 500; text-decoration: none">Drivers of north-spit retreat</a>
+    <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 6px 8px 6px 46px; border-radius: 6px; color: #d0d4d9; text-decoration: none">Storm event timeline</a>
+    <div style="display: flex; align-items: center; gap: 8px; padding: 6px 8px; color: #d0d4d9">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9aa0a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9aa0a8" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path></svg>
+      Field seasons
+    </div>
+    <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 6px 8px 6px 30px; border-radius: 6px; color: #d0d4d9; text-decoration: none">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9aa0a8" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"></path><path d="M14 3v5h5"></path></svg>
+      Team meeting, Oct 14
+    </a>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #3c4148; padding-top: 16px">
+    <span style="font-size: 12px; font-weight: 500; color: #9aa0a8; padding: 0 8px">Linked mentions</span>
+    <a href="#" style="padding: 6px 8px; border-radius: 6px; color: #d0d4d9; text-decoration: none; display: block">
+      <span style="display: block; color: #f9fafb">Storm event timeline</span>
+      <span style="display: block; font-size: 12px; color: #9aa0a8">“…see [[Drivers of north-spit retreat]] for the dredging argument”</span>
+    </a>
+    <a href="#" style="padding: 6px 8px; border-radius: 6px; color: #d0d4d9; text-decoration: none; display: block">
+      <span style="display: block; color: #f9fafb">Team meeting, Oct 14</span>
+      <span style="display: block; font-size: 12px; color: #9aa0a8">“Daniel to extend section 1”</span>
+    </a>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid #3c4148; padding-top: 16px">
+    <span style="font-size: 12px; font-weight: 500; color: #9aa0a8; padding: 0 8px">Tags</span>
+    <div style="display: flex; flex-wrap: wrap; gap: 6px; padding: 0 8px">
+      <span style="padding: 2px 8px; border-radius: 999px; background: #14181d; border: 1px solid #3c4148; color: #d0d4d9; font-size: 12px">#dredging</span>
+      <span style="padding: 2px 8px; border-radius: 999px; background: #14181d; border: 1px solid #3c4148; color: #d0d4d9; font-size: 12px">#storms</span>
+      <span style="padding: 2px 8px; border-radius: 999px; background: #14181d; border: 1px solid #3c4148; color: #d0d4d9; font-size: 12px">#aerial-imagery</span>
+      <span style="padding: 2px 8px; border-radius: 999px; background: #14181d; border: 1px solid #3c4148; color: #d0d4d9; font-size: 12px">#draft</span>
+    </div>
+  </div>
+</aside>
+
+<!-- Center: collaborative editor -->
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+  <div role="toolbar" aria-label="Formatting" style="display: flex; align-items: center; gap: 4px; flex-wrap: wrap; padding: 8px 16px; border-bottom: 1px solid #25292f">
+    <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 1px solid #3c4148; background: transparent; color: #e5e8eb; display: flex; align-items: center; gap: 6px; cursor: pointer">Heading 2
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9aa0a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+    <span aria-hidden="true" style="width: 1px; height: 20px; background: #3c4148; margin: 0 6px"></span>
+    <button type="button" aria-label="Bold" style="width: 32px; height: 32px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; font-weight: 600; cursor: pointer">B</button>
+    <button type="button" aria-label="Italic" style="width: 32px; height: 32px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; font-style: italic; cursor: pointer">I</button>
+    <button type="button" aria-label="Bulleted list" style="width: 32px; height: 32px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"></path><circle cx="4.5" cy="6" r="1"></circle><circle cx="4.5" cy="12" r="1"></circle><circle cx="4.5" cy="18" r="1"></circle></svg></button>
+    <button type="button" aria-label="Block quote" style="width: 32px; height: 32px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M5 5v14M10 7h10M10 12h10M10 17h6"></path></svg></button>
+    <button type="button" aria-label="Insert link to note" style="width: 32px; height: 32px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"></path><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"></path></svg></button>
+    <span aria-hidden="true" style="width: 1px; height: 20px; background: #3c4148; margin: 0 6px"></span>
+    <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 0; background: rgba(95,202,234,0.14); color: #5fcaea; font-weight: 500; display: flex; align-items: center; gap: 6px; cursor: pointer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4H6v16h3M15 4h3v16h-3"></path></svg>
+      Cite record
+      <kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #d0d4d9">[[</kbd>
+    </button>
+    <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; display: flex; align-items: center; gap: 6px; cursor: pointer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg>
+      Comment
+    </button>
+    <div style="margin-left: auto; display: flex; align-items: center; gap: 12px">
+      <span style="display: flex; align-items: center; gap: 6px; color: #9aa0a8">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#21d195" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>
+        Saved · just now
+      </span>
+      <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; display: flex; align-items: center; gap: 6px; cursor: pointer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+        Version history
+      </button>
+    </div>
+  </div>
+
+  <article style="max-width: 70ch; width: 100%; box-sizing: content-box; margin: 0 auto; padding: 40px 32px 64px; font-size: 18px; line-height: 30px; color: #e5e8eb">
+    <h1 style="margin: 0 0 8px; font-size: 32px; line-height: 40px; font-weight: 600; letter-spacing: -0.01em; color: #f9fafb">Drivers of north-spit retreat, 1962–2019</h1>
+    <p style="margin: 0 0 32px; font-size: 14px; line-height: 20px; color: #9aa0a8">Maya Okafor, Daniel Reyes, Priya Natarajan and you · Created Sep 30 · 4 citations</p>
+
+    <h2 style="margin: 0 0 8px; font-size: 22px; line-height: 30px; font-weight: 600; color: #f9fafb">Summary</h2>
+    <p style="margin: 0 0 24px">The north spit at Harlow Inlet has moved landward across the period the catalog covers. This note sets out the drivers the team has found evidence for so far, and where the record is still thin.</p>
+
+    <h2 style="margin: 0 0 8px; font-size: 22px; line-height: 30px; font-weight: 600; color: #f9fafb">1. Channel dredging</h2>
+    <p style="margin: 0 0 24px">The earliest aerial coverage shows a continuous spit with a broad dune line
+      <a href="#ref-1" style="display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; border: 1px solid rgba(95,202,234,0.35); background: rgba(95,202,234,0.12); color: #5fcaea; font-size: 15px; line-height: 24px; text-decoration: none; white-space: nowrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="M21 16l-5-5-9 9"></path></svg>Aerial photograph, 1962</a>.
+      The beach profiles surveyed before any channel work give a usable baseline
+      <a href="#ref-2" aria-describedby="record-panel" style="display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; border: 1px solid #5fcaea; background: rgba(95,202,234,0.24); color: #b6effc; font-size: 15px; line-height: 24px; text-decoration: none; white-space: nowrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"></path><path d="M14 3v5h5"></path></svg>Profile survey notebook, 1978 · p. 12</a>,
+      and permit filings from the mid-1980s describe deepening the navigation channel along the spit’s inner <span style="background: oklch(71.8% 0.202 349.761 / 0.22); border-radius: 2px">edge
+      <a href="#ref-3" style="display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; border: 1px solid rgba(95,202,234,0.35); background: rgba(95,202,234,0.12); color: #5fcaea; font-size: 15px; line-height: 24px; text-decoration: none; white-space: nowrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"></path><path d="M14 3v5h5"></path></svg>Dredging permit, 1985</a></span><span style="position: relative; display: inline-block; width: 2px; height: 22px; background: oklch(71.8% 0.202 349.761); vertical-align: -4px"><span style="position: absolute; bottom: 100%; left: 0; padding: 0 6px; border-radius: 4px 4px 4px 0; background: oklch(71.8% 0.202 349.761); color: #14181d; font-size: 11px; line-height: 16px; font-weight: 600; white-space: nowrap">Priya Natarajan</span></span>.
+      What is missing is a survey taken after the work, to compare against the 1978 profiles<span style="position: relative; display: inline-block; width: 2px; height: 22px; background: oklch(84.1% 0.238 128.85); vertical-align: -4px"><span style="position: absolute; bottom: 100%; left: 0; padding: 0 6px; border-radius: 4px 4px 4px 0; background: oklch(84.1% 0.238 128.85); color: #14181d; font-size: 11px; line-height: 16px; font-weight: 600; white-space: nowrap">Daniel Reyes</span></span></p>
+
+    <h2 style="margin: 0 0 8px; font-size: 22px; line-height: 30px; font-weight: 600; color: #f9fafb">2. Storm overwash</h2>
+    <p style="margin: 0 0 4px">Field crews recorded overwash across the narrowest section of the spit after the October 1991 nor’easter
+      <a href="#ref-4" style="display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; border: 1px solid rgba(95,202,234,0.35); background: rgba(95,202,234,0.12); color: #5fcaea; font-size: 15px; line-height: 24px; text-decoration: none; white-space: nowrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"></path><path d="M14 3v5h5"></path></svg>Storm field report, 1991 · p. 4</a>.
+      Compare that breach line with the 1971 chart, which shows <span style="color: #5fcaea">[[nautical</span><span style="display: inline-block; width: 2px; height: 22px; background: oklch(85.5% 0.138 181.071); vertical-align: -4px"></span></p>
+
+    
+    <div style="position: relative; height: 0">
+      <div role="dialog" aria-label="Cite a record" style="position: absolute; top: 4px; left: 120px; width: 460px; z-index: 2; background: #25292f; border: 1px solid #3c4148; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.4); font-size: 14px; line-height: 20px; overflow: hidden">
+        <div style="display: flex; align-items: center; gap: 4px; padding: 8px; border-bottom: 1px solid #3c4148">
+          <button type="button" aria-pressed="true" style="height: 28px; padding: 0 10px; border-radius: 6px; border: 0; background: #3c4148; color: #f9fafb; font-weight: 500; cursor: pointer">Project bin</button>
+          <button type="button" aria-pressed="false" style="height: 28px; padding: 0 10px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; cursor: pointer">Whole catalog</button>
+          <span style="margin-left: auto; font-size: 12px; color: #9aa0a8">3 matches for “nautical”</span>
+        </div>
+        <div role="listbox" aria-label="Matching records" style="padding: 6px">
+          <div role="option" aria-selected="true" style="display: flex; gap: 10px; padding: 8px; border-radius: 6px; background: #3c4148">
+            <span aria-hidden="true" style="width: 32px; height: 32px; flex: none; border-radius: 6px; background: #25292f; color: #f9fafb; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"></path><path d="M9 4v14M15 6v14"></path></svg></span>
+            <span style="flex: 1; min-width: 0">
+              <span style="display: block; color: #f9fafb; font-weight: 500">Nautical chart, Harlow Inlet approaches, 1971 ed.</span>
+              <span style="display: block; font-size: 12px; color: #d0d4d9">Map · In this project’s bin · <span style="font-family: 'IBM Plex Mono', monospace">CAT-1971-00093</span></span>
+            </span>
+          </div>
+          <div role="option" aria-selected="false" style="display: flex; gap: 10px; padding: 8px; border-radius: 6px">
+            <span aria-hidden="true" style="width: 32px; height: 32px; flex: none; border-radius: 6px; background: #3c4148; color: #d0d4d9; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"></path><path d="M9 4v14M15 6v14"></path></svg></span>
+            <span style="flex: 1; min-width: 0">
+              <span style="display: block; color: #e5e8eb">Nautical chart, Harlow Inlet approaches, 1988 ed.</span>
+              <span style="display: block; font-size: 12px; color: #9aa0a8">Map · Catalog · <span style="font-family: 'IBM Plex Mono', monospace">CAT-1988-00117</span></span>
+            </span>
+          </div>
+          <div role="option" aria-selected="false" style="display: flex; gap: 10px; padding: 8px; border-radius: 6px">
+            <span aria-hidden="true" style="width: 32px; height: 32px; flex: none; border-radius: 6px; background: #3c4148; color: #d0d4d9; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"></path><path d="M14 3v5h5"></path></svg></span>
+            <span style="flex: 1; min-width: 0">
+              <span style="display: block; color: #e5e8eb">Notice to mariners: shoaling at Harlow Inlet, 1974</span>
+              <span style="display: block; font-size: 12px; color: #9aa0a8">PDF · Catalog · <span style="font-family: 'IBM Plex Mono', monospace">CAT-1974-05521</span></span>
+            </span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 16px; padding: 8px 12px; border-top: 1px solid #3c4148; font-size: 12px; color: #9aa0a8">
+          <span><kbd style="font-family: 'IBM Plex Mono', monospace; color: #d0d4d9">↵</kbd> Insert citation</span>
+          <span><kbd style="font-family: 'IBM Plex Mono', monospace; color: #d0d4d9">⇥</kbd> Cite a page or region</span>
+          <span><kbd style="font-family: 'IBM Plex Mono', monospace; color: #d0d4d9">⌘↵</kbd> Open record</span>
+        </div>
+      </div>
+    </div>
+    
+
+    <p style="margin: 20px 0 24px; color: #d0d4d9">&nbsp;</p>
+
+    <h2 style="margin: 0 0 8px; font-size: 22px; line-height: 30px; font-weight: 600; color: #f9fafb">3. Sediment supply</h2>
+    <p style="margin: 0 0 32px; display: flex; gap: 12px; align-items: flex-start">
+      <span style="flex: 1">Reduced sand reaching the spit from the north is a likely contributor, but no record in the bin supports it yet.</span>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 0 8px; border-radius: 4px; background: rgba(250,188,0,0.12); color: #fabc00; font-size: 13px; line-height: 24px; white-space: nowrap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3z"></path><path d="M12 10v4M12 17v.5"></path></svg>
+        Needs a source
+      </span>
+    </p>
+
+    <section aria-labelledby="refs-h" style="border-top: 1px solid #3c4148; padding-top: 20px; font-size: 14px; line-height: 22px">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px">
+        <h2 id="refs-h" style="margin: 0; font-size: 16px; line-height: 24px; font-weight: 600; color: #f9fafb">References</h2>
+        <span style="color: #9aa0a8; font-size: 12px">Built from citations · updates as you write</span>
+        <button type="button" style="margin-left: auto; height: 28px; padding: 0 10px; border-radius: 6px; border: 1px solid #6d737c; background: transparent; color: #e5e8eb; display: flex; align-items: center; gap: 6px; cursor: pointer">Chicago author-date
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9aa0a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+      </div>
+      <ol style="margin: 0; padding-left: 20px; color: #d0d4d9; display: flex; flex-direction: column; gap: 6px">
+        <li id="ref-1">Coastal Imagery Collection. 1962. <em>Aerial photograph, Harlow Inlet north spit.</em> <span style="font-family: 'IBM Plex Mono', monospace; color: #9aa0a8">CAT-1962-00418</span></li>
+        <li id="ref-2">Shore Survey Division. 1978. <em>Beach profile survey notebook, transects 1–24</em>, p. 12. <span style="font-family: 'IBM Plex Mono', monospace; color: #9aa0a8">CAT-1978-02231</span></li>
+        <li id="ref-3">Harbor Commission. 1985. <em>Application for channel maintenance dredging.</em> <span style="font-family: 'IBM Plex Mono', monospace; color: #9aa0a8">CAT-1985-11907</span></li>
+        <li id="ref-4">Field Operations Unit. 1991. <em>Post-storm field report, October nor’easter</em>, p. 4. <span style="font-family: 'IBM Plex Mono', monospace; color: #9aa0a8">CAT-1991-07750</span></li>
+      </ol>
+    </section>
+  </article>
+</main>
+
+<!-- Right: record inspector + comments -->
+<aside id="record-panel" aria-label="Citation details" style="flex: 0 1 340px; min-width: 280px; background: #25292f; border-left: 1px solid #3c4148; box-sizing: border-box; display: flex; flex-direction: column">
+  <div role="tablist" aria-label="Side panel" style="display: flex; gap: 4px; padding: 8px 12px; border-bottom: 1px solid #3c4148">
+    <button type="button" role="tab" aria-selected="true" style="height: 32px; padding: 0 12px; border: 0; border-bottom: 2px solid #64a4ee; background: transparent; color: #f9fafb; font-weight: 500; cursor: pointer">Record</button>
+    <button type="button" role="tab" aria-selected="false" style="height: 32px; padding: 0 12px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #d0d4d9; cursor: pointer">Comments <span style="margin-left: 4px; padding: 0 6px; border-radius: 999px; background: #3c4148; color: #f9fafb; font-size: 12px">2</span></button>
+    <button type="button" role="tab" aria-selected="false" style="height: 32px; padding: 0 12px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #d0d4d9; cursor: pointer">Outline</button>
+  </div>
+
+  <div style="padding: 16px; display: flex; flex-direction: column; gap: 16px">
+    <div aria-label="Scanned page preview" role="img" style="height: 200px; border-radius: 8px; background: #14181d; border: 1px solid #3c4148; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center">
+      <div aria-hidden="true" style="width: 150px; height: 180px; background: #d0d4d9; border-radius: 2px; padding: 14px 12px; box-sizing: border-box; display: flex; flex-direction: column; gap: 7px">
+        <span style="height: 5px; width: 60%; background: #9aa0a8; display: block"></span>
+        <span style="height: 4px; width: 100%; background: #9aa0a8; display: block"></span>
+        <span style="height: 4px; width: 92%; background: #9aa0a8; display: block"></span>
+        <span style="height: 34px; width: 100%; border: 2px solid oklch(68.1% 0.162 75.834); background: oklch(90.5% 0.182 98.111 / 0.45); display: block; box-sizing: border-box"></span>
+        <span style="height: 4px; width: 88%; background: #9aa0a8; display: block"></span>
+        <span style="height: 4px; width: 96%; background: #9aa0a8; display: block"></span>
+        <span style="height: 4px; width: 70%; background: #9aa0a8; display: block"></span>
+      </div>
+      <span style="position: absolute; left: 8px; bottom: 8px; padding: 0 6px; border-radius: 4px; background: #25292f; color: #d0d4d9; font-size: 12px">Page 12 of 64 · cited region</span>
+    </div>
+    <div>
+      <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: #5fcaea; font-weight: 500">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"></path><path d="M14 3v5h5"></path></svg>
+        Scanned PDF
+      </span>
+      <h3 style="margin: 4px 0 0; font-size: 16px; line-height: 24px; font-weight: 600; color: #f9fafb">Beach profile survey notebook, transects 1–24</h3>
+    </div>
+    <dl style="margin: 0; display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 8px 12px; font-size: 14px">
+      <dt style="color: #9aa0a8">Catalog ID</dt><dd style="margin: 0; font-family: 'IBM Plex Mono', monospace; color: #e5e8eb">CAT-1978-02231</dd>
+      <dt style="color: #9aa0a8">Date</dt><dd style="margin: 0; color: #e5e8eb">1978</dd>
+      <dt style="color: #9aa0a8">Collection</dt><dd style="margin: 0; color: #e5e8eb">Shore Survey Division records</dd>
+      <dt style="color: #9aa0a8">Access</dt><dd style="margin: 0; color: #e5e8eb">Internal · cite freely</dd>
+    </dl>
+    <div style="display: flex; gap: 8px">
+      <button type="button" style="flex: 1; height: 32px; border-radius: 6px; border: 1px solid #6d737c; background: transparent; color: #e5e8eb; display: flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg>
+        Open record</button>
+      <button type="button" style="flex: 1; height: 32px; border-radius: 6px; border: 0; background: rgba(100,164,238,0.14); color: #64a4ee; font-weight: 500; cursor: pointer">Change page</button>
+    </div>
+    <div style="border-top: 1px solid #3c4148; padding-top: 12px; display: flex; flex-direction: column; gap: 6px">
+      <span style="font-size: 12px; font-weight: 500; color: #9aa0a8">Also cited in</span>
+      <a href="#" style="display: flex; justify-content: space-between; color: #d0d4d9; text-decoration: none"><span>Storm event timeline</span><span style="color: #9aa0a8">2×</span></a>
+      <a href="#" style="display: flex; justify-content: space-between; color: #d0d4d9; text-decoration: none"><span>Prior shoreline studies</span><span style="color: #9aa0a8">1×</span></a>
+    </div>
+
+    <div style="border-top: 1px solid #3c4148; padding-top: 12px; display: flex; flex-direction: column; gap: 10px">
+      <span style="font-size: 12px; font-weight: 500; color: #9aa0a8">Comment on the highlighted passage</span>
+      <div style="background: #14181d; border: 1px solid #3c4148; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 8px">
+        <div style="display: flex; align-items: center; gap: 8px">
+          <span aria-hidden="true" style="width: 24px; height: 24px; border-radius: 999px; background: oklch(71.8% 0.202 349.761); color: #14181d; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center">PN</span>
+          <span style="color: #f9fafb; font-weight: 500">Priya Natarajan</span>
+          <span style="color: #9aa0a8; font-size: 12px">5 min</span>
+        </div>
+        <p style="margin: 0; color: #e5e8eb">Is there a post-dredging profile survey in the catalog? Without it this paragraph is an inference.</p>
+        <div style="display: flex; gap: 8px">
+          <button type="button" style="height: 28px; padding: 0 10px; border-radius: 6px; border: 1px solid #6d737c; background: transparent; color: #e5e8eb; cursor: pointer">Reply</button>
+          <button type="button" style="height: 28px; padding: 0 10px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; display: flex; align-items: center; gap: 4px; cursor: pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Resolve</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+</div>
+</div>
+</body>
+</html>

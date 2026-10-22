@@ -1,0 +1,137 @@
+[
+  {
+    "id": "rn_01",
+    "projectId": "p_harlow",
+    "recordId": "r_stormreport1991",
+    "locator": {
+      "kind": "page",
+      "label": "p. 4",
+      "page": 4,
+      "region": {
+        "x": 0.06,
+        "y": 0.18,
+        "w": 0.88,
+        "h": 0.1
+      }
+    },
+    "excerpt": "Overwash observed across the spit at its narrowest point; dune line absent for roughly the central third of the transect.",
+    "body": "First direct record of a breach at the narrow section. Lines up with the gap visible in the 1991 oblique photos.",
+    "authorId": "u_daniel",
+    "createdAt": "2026-10-12T09:00:00Z",
+    "flags": [],
+    "usedInNoteIds": [
+      "n_drivers",
+      "n_timeline"
+    ]
+  },
+  {
+    "id": "rn_02",
+    "projectId": "p_harlow",
+    "recordId": "r_stormreport1991",
+    "locator": {
+      "kind": "page",
+      "label": "p. 4",
+      "page": 4,
+      "region": {
+        "x": 0.06,
+        "y": 0.6,
+        "w": 0.88,
+        "h": 0.06
+      }
+    },
+    "excerpt": "Recommend survey of channel margin once conditions allow.",
+    "body": "Worth checking whether that survey happened. If it did, it’s the post-dredging comparison we’re missing.",
+    "authorId": "u_priya",
+    "createdAt": "2026-10-15T09:00:00Z",
+    "flags": [
+      "follow-up"
+    ],
+    "usedInNoteIds": []
+  },
+  {
+    "id": "rn_03",
+    "projectId": "p_harlow",
+    "recordId": "r_stormreport1991",
+    "locator": {
+      "kind": "whole",
+      "label": "Whole record"
+    },
+    "excerpt": null,
+    "body": "Typed report with hand-drawn sketch maps on pp. 6–9. The sketch scale isn’t stated, so treat distances as approximate.",
+    "authorId": "u_maya",
+    "createdAt": "2026-10-09T09:00:00Z",
+    "flags": [],
+    "usedInNoteIds": []
+  },
+  {
+    "id": "rn_04",
+    "projectId": "p_harlow",
+    "recordId": "r_margin1987",
+    "locator": {
+      "kind": "file",
+      "label": "line_14.xyz",
+      "file": "line_14.xyz"
+    },
+    "snippetIds": [
+      "snp_line14"
+    ],
+    "excerpt": null,
+    "body": "This is the post-dredging survey Priya asked about. The inner slope is visibly steeper than the 1978 baseline.",
+    "authorId": "u_daniel",
+    "createdAt": "2026-10-19T11:00:00Z",
+    "flags": [],
+    "usedInNoteIds": [
+      "n_drivers"
+    ]
+  },
+  {
+    "id": "rn_05",
+    "projectId": "p_harlow",
+    "recordId": "r_margin1987",
+    "locator": {
+      "kind": "file",
+      "label": "survey_notes.txt",
+      "file": "survey_notes.txt"
+    },
+    "snippetIds": [
+      "snp_surveynotes"
+    ],
+    "excerpt": "Lines 8–14 re-run Sept 14 after dredge cleared margin.",
+    "body": "Confirms the timing: survey is after the dredging, not before.",
+    "authorId": "u_maya",
+    "createdAt": "2026-10-19T11:30:00Z",
+    "flags": [],
+    "usedInNoteIds": []
+  },
+  {
+    "id": "rn_06",
+    "projectId": "p_harlow",
+    "recordId": "r_oblique1991",
+    "locator": {
+      "kind": "frame",
+      "label": "frames 7–11"
+    },
+    "excerpt": "washover fan, north spit narrows",
+    "body": "Same location as the field report breach.",
+    "authorId": "u_you",
+    "createdAt": "2026-10-13T09:00:00Z",
+    "flags": [],
+    "usedInNoteIds": []
+  },
+  {
+    "id": "rn_07",
+    "projectId": "p_harlow",
+    "recordId": "r_oralhistory",
+    "locator": {
+      "kind": "timestamp",
+      "label": "00:14:32",
+      "startSec": 872
+    },
+    "excerpt": null,
+    "body": "Pilot says the inside of the spit was already eroding before the dredge came in. No snippet yet.",
+    "authorId": "u_daniel",
+    "createdAt": "2026-10-17T09:00:00Z",
+    "flags": [],
+    "usedInNoteIds": []
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "cm_01",
+    "noteId": "n_drivers",
+    "anchorText": "edge",
+    "authorId": "u_priya",
+    "createdAt": "2026-10-21T13:57:00Z",
+    "resolved": false,
+    "body": "Is there a post-dredging profile survey in the catalog? Without it this paragraph is an inference.",
+    "replies": [
+      {
+        "authorId": "u_daniel",
+        "createdAt": "2026-10-21T14:00:00Z",
+        "body": "Found one: the 1987 channel margin survey. Adding it to the bin."
+      }
+    ]
+  }
+]

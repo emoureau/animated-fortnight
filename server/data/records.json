@@ -1,0 +1,625 @@
+[
+  {
+    "id": "r_aerial1962",
+    "catalogId": "CAT-1962-00418",
+    "title": "Aerial photograph, Harlow Inlet north spit",
+    "date": "1962",
+    "creator": "Coastal Imagery Collection",
+    "collection": "Coastal Imagery Collection",
+    "type": "image",
+    "availability": {
+      "mode": "inline",
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "widthPx": 6800,
+      "heightPx": 6800
+    },
+    "description": "Vertical aerial photograph of the north spit and inlet throat, flown at low tide.",
+    "keywords": [
+      "aerial photograph",
+      "north spit",
+      "dune line"
+    ]
+  },
+  {
+    "id": "r_profiles1978",
+    "catalogId": "CAT-1978-02231",
+    "title": "Beach profile survey notebook, transects 1–24",
+    "date": "1978",
+    "creator": "Shore Survey Division",
+    "collection": "Shore Survey Division records",
+    "type": "document",
+    "availability": {
+      "mode": "inline",
+      "format": "PDF (scanned)",
+      "mimeType": "application/pdf",
+      "pages": 64,
+      "hasOcr": true
+    },
+    "description": "Field notebook of shore-normal beach profiles along the north spit, surveyed before channel maintenance.",
+    "keywords": [
+      "beach profile",
+      "transects",
+      "baseline"
+    ]
+  },
+  {
+    "id": "r_permit1985",
+    "catalogId": "CAT-1985-11907",
+    "title": "Application for channel maintenance dredging",
+    "date": "1985",
+    "creator": "Harbor Commission",
+    "collection": "Harbor Commission permits",
+    "type": "document",
+    "availability": {
+      "mode": "inline",
+      "format": "PDF",
+      "mimeType": "application/pdf",
+      "pages": 12,
+      "hasOcr": true
+    },
+    "description": "Permit application to deepen the navigation channel along the northern margin, adjacent to the spit.",
+    "keywords": [
+      "dredging",
+      "permit",
+      "navigation channel"
+    ]
+  },
+  {
+    "id": "r_stormreport1991",
+    "catalogId": "CAT-1991-07750",
+    "title": "Post-storm field report, October nor’easter",
+    "date": "1991",
+    "creator": "Field Operations Unit",
+    "collection": "Field Operations reports",
+    "type": "document",
+    "availability": {
+      "mode": "inline",
+      "format": "PDF (scanned)",
+      "mimeType": "application/pdf",
+      "pages": 18,
+      "hasOcr": true
+    },
+    "description": "Typed field report with hand-drawn sketch maps (pp. 6–9) documenting overwash after the October 1991 storm.",
+    "keywords": [
+      "overwash",
+      "breach",
+      "nor'easter",
+      "1991"
+    ]
+  },
+  {
+    "id": "r_oblique1991",
+    "catalogId": "CAT-1991-07761",
+    "title": "Oblique aerial photographs, overwash fans",
+    "date": "1991",
+    "creator": "Coastal Imagery Collection",
+    "collection": "Coastal Imagery Collection",
+    "type": "image-set",
+    "availability": {
+      "mode": "inline",
+      "format": "JPEG set",
+      "mimeType": "image/jpeg",
+      "frames": 24
+    },
+    "description": "Oblique photographs taken the week after the October 1991 storm. Captions on frames 7–11 read “washover fan, north spit narrows.”",
+    "keywords": [
+      "oblique photograph",
+      "washover fan",
+      "overwash"
+    ]
+  },
+  {
+    "id": "r_gaugereport1978",
+    "catalogId": "CAT-1978-00981",
+    "title": "Tide gauge installation report",
+    "date": "1978",
+    "creator": "Shore Survey Division",
+    "collection": "Shore Survey Division records",
+    "type": "document",
+    "availability": {
+      "mode": "inline",
+      "format": "PDF",
+      "mimeType": "application/pdf",
+      "pages": 22,
+      "hasOcr": true
+    },
+    "description": "Installation and datum report for the Harlow Inlet tide gauge.",
+    "keywords": [
+      "tide gauge",
+      "datum"
+    ]
+  },
+  {
+    "id": "r_shoreline",
+    "catalogId": "CAT-2019-08812",
+    "title": "Shoreline positions, north spit, 1962–2019",
+    "date": "2019",
+    "creator": "Coastal Mapping Program",
+    "collection": "Coastal Mapping Program",
+    "type": "dataset",
+    "availability": {
+      "mode": "download",
+      "format": "Esri shapefile (.zip)",
+      "sizeBytes": 50331648,
+      "opensIn": "GIS software",
+      "manifest": [
+        {
+          "path": "inner_edge.shp",
+          "sizeBytes": 22020096
+        },
+        {
+          "path": "outer_edge.shp",
+          "sizeBytes": 19922944
+        },
+        {
+          "path": "transects.shp",
+          "sizeBytes": 6291456
+        },
+        {
+          "path": "README.txt",
+          "sizeBytes": 4096
+        }
+      ]
+    },
+    "description": "Digitized inner and outer shoreline positions for each survey year, 1962–2019.",
+    "keywords": [
+      "shoreline",
+      "GIS",
+      "inner edge"
+    ]
+  },
+  {
+    "id": "r_margin1987",
+    "catalogId": "CAT-1987-03318",
+    "title": "Channel margin hydrographic survey",
+    "date": "1987",
+    "creator": "Shore Survey Division",
+    "collection": "Shore Survey Division records",
+    "type": "dataset",
+    "availability": {
+      "mode": "download",
+      "format": "XYZ points (.zip)",
+      "sizeBytes": 2254857830,
+      "opensIn": "GIS or survey software",
+      "manifest": [
+        {
+          "path": "line_08.xyz",
+          "sizeBytes": 155189248
+        },
+        {
+          "path": "line_09.xyz",
+          "sizeBytes": 158334976
+        },
+        {
+          "path": "line_14.xyz",
+          "sizeBytes": 169869312
+        },
+        {
+          "path": "survey_notes.txt",
+          "sizeBytes": 12288
+        }
+      ],
+      "manifestTotalFiles": 14
+    },
+    "description": "Single-beam soundings along the northern channel margin, surveyed after maintenance dredging. Lines run shore-normal across the spit’s inner edge.",
+    "keywords": [
+      "hydrographic survey",
+      "post-dredging",
+      "channel margin"
+    ]
+  },
+  {
+    "id": "r_drawings1985",
+    "catalogId": "CAT-1985-11930",
+    "title": "Channel design drawings",
+    "date": "1985",
+    "creator": "Harbor Commission",
+    "collection": "Harbor Commission permits",
+    "type": "drawing",
+    "availability": {
+      "mode": "download",
+      "format": "AutoCAD drawing (.dwg)",
+      "sizeBytes": 89128960,
+      "opensIn": "CAD software"
+    },
+    "description": "Design sections for the deepened channel.",
+    "keywords": [
+      "channel design",
+      "CAD"
+    ]
+  },
+  {
+    "id": "r_oralhistory",
+    "catalogId": "CAT-2004-31002",
+    "title": "Oral history: harbor pilot interview",
+    "date": "2004",
+    "creator": "Maritime Heritage Oral History Project",
+    "collection": "Oral histories",
+    "type": "audio",
+    "availability": {
+      "mode": "download",
+      "format": "WAV audio",
+      "sizeBytes": 796917760,
+      "opensIn": "an audio player",
+      "durationSec": 4320
+    },
+    "description": "Interview with a retired harbor pilot about changes to the inlet, 1960s–2000s.",
+    "keywords": [
+      "oral history",
+      "harbor pilot",
+      "erosion"
+    ]
+  },
+  {
+    "id": "r_dunerepair1992",
+    "catalogId": "CAT-1992-00214",
+    "title": "Emergency dune repair work order",
+    "date": "1992",
+    "creator": "Public Works",
+    "collection": "Public Works orders",
+    "type": "document",
+    "availability": {
+      "mode": "download",
+      "format": "Word 97 document (.doc)",
+      "sizeBytes": 2097152,
+      "opensIn": "a word processor"
+    },
+    "description": "Work order for emergency dune repair on the north spit after the 1991–92 storm season.",
+    "keywords": [
+      "dune repair",
+      "work order"
+    ]
+  },
+  {
+    "id": "r_overwashmap1992",
+    "catalogId": "CAT-1992-00230",
+    "title": "Overwash extent map, north spit",
+    "date": "1992",
+    "creator": "Coastal Mapping Program",
+    "collection": "Coastal Mapping Program",
+    "type": "map",
+    "availability": {
+      "mode": "download",
+      "format": "File geodatabase (.gdb.zip)",
+      "sizeBytes": 125829120,
+      "opensIn": "GIS software"
+    },
+    "description": "Mapped extent of overwash deposits from the October 1991 storm.",
+    "keywords": [
+      "overwash",
+      "map",
+      "1991"
+    ]
+  },
+  {
+    "id": "r_waterlevels",
+    "catalogId": "CAT-2019-02207",
+    "title": "Tide gauge hourly water levels, 1978–2019",
+    "date": "2019",
+    "creator": "Shore Survey Division",
+    "collection": "Tide gauge archive",
+    "type": "dataset",
+    "availability": {
+      "mode": "download",
+      "format": "NetCDF (.nc)",
+      "sizeBytes": 325058560,
+      "opensIn": "data analysis software"
+    },
+    "description": "Hourly verified water levels from the inlet tide gauge.",
+    "keywords": [
+      "water level",
+      "tide gauge"
+    ]
+  },
+  {
+    "id": "r_mosaic1996",
+    "catalogId": "CAT-1996-00527",
+    "title": "Orthorectified aerial mosaic, Harlow Inlet",
+    "date": "1996",
+    "creator": "Coastal Imagery Collection",
+    "collection": "Coastal Imagery Collection",
+    "type": "image",
+    "availability": {
+      "mode": "download",
+      "format": "GeoTIFF",
+      "sizeBytes": 1503238553,
+      "opensIn": "GIS software"
+    },
+    "description": "Post-storm coverage of breach at north spit.",
+    "keywords": [
+      "aerial mosaic",
+      "breach",
+      "1996"
+    ]
+  },
+  {
+    "id": "r_changerates",
+    "catalogId": "CAT-1981-00412",
+    "title": "Shoreline change rates, 1950–1980",
+    "date": "1981",
+    "creator": "Coastal Mapping Program",
+    "collection": "Coastal Mapping Program",
+    "type": "dataset",
+    "availability": {
+      "mode": "download",
+      "format": "Excel workbook (.xlsx)",
+      "sizeBytes": 2097152,
+      "opensIn": "a spreadsheet application"
+    },
+    "description": "Tabulated change rates by transect; notes inner-edge retreat in the 1970s.",
+    "keywords": [
+      "change rates",
+      "1970s",
+      "inner edge"
+    ]
+  },
+  {
+    "id": "r_drone2019",
+    "catalogId": "CAT-2019-07701",
+    "title": "Drone video, overwash event",
+    "date": "2019",
+    "creator": "Coastal Imagery Collection",
+    "collection": "Coastal Imagery Collection",
+    "type": "video",
+    "availability": {
+      "mode": "download",
+      "format": "ProRes video (.mov)",
+      "sizeBytes": 3650722201,
+      "opensIn": "a video player that supports ProRes",
+      "durationSec": 840
+    },
+    "description": "Low-altitude video of overwash across the north spit during a 2019 storm.",
+    "keywords": [
+      "drone",
+      "video",
+      "overwash",
+      "2019"
+    ]
+  },
+  {
+    "id": "r_chart1971",
+    "catalogId": "CAT-1971-00093",
+    "title": "Nautical chart, Harlow Inlet approaches, 1971 ed.",
+    "date": "1971",
+    "creator": "Hydrographic Office",
+    "collection": "Historical charts",
+    "type": "map",
+    "availability": {
+      "mode": "download",
+      "format": "BSB raster chart (.kap)",
+      "sizeBytes": 41943040,
+      "opensIn": "chart-viewing software"
+    },
+    "description": "Chart edition showing soundings and the shoal at the inlet mouth.",
+    "keywords": [
+      "nautical chart",
+      "1971",
+      "shoal"
+    ]
+  },
+  {
+    "id": "r_chart1988",
+    "catalogId": "CAT-1988-00117",
+    "title": "Nautical chart, Harlow Inlet approaches, 1988 ed.",
+    "date": "1988",
+    "creator": "Hydrographic Office",
+    "collection": "Historical charts",
+    "type": "map",
+    "availability": {
+      "mode": "download",
+      "format": "TIFF",
+      "sizeBytes": 671088640,
+      "opensIn": "an image editor"
+    },
+    "description": "Chart edition after channel maintenance.",
+    "keywords": [
+      "nautical chart",
+      "1988"
+    ]
+  },
+  {
+    "id": "r_sediment1996",
+    "catalogId": "CAT-1996-04410",
+    "title": "Longshore sediment budget study",
+    "date": "1996",
+    "creator": "Coastal Engineering Lab",
+    "collection": "Engineering studies",
+    "type": "dataset",
+    "availability": {
+      "mode": "download",
+      "format": "MATLAB data + report (.zip)",
+      "sizeBytes": 241172480,
+      "opensIn": "MATLAB or a PDF reader after unzipping"
+    },
+    "description": "Sediment budget for the inlet system with model outputs.",
+    "keywords": [
+      "sediment budget",
+      "longshore transport"
+    ]
+  },
+  {
+    "id": "r_ledger1975",
+    "catalogId": "CAT-1975-00402",
+    "title": "Chart corrections ledger, 1971–1975",
+    "date": "1975",
+    "creator": "Hydrographic Office",
+    "collection": "Historical charts",
+    "type": "document",
+    "availability": {
+      "mode": "download",
+      "format": "Multi-page TIFF",
+      "sizeBytes": 99614720,
+      "opensIn": "an image viewer"
+    },
+    "description": "Handwritten ledger of chart corrections for the inlet approaches.",
+    "keywords": [
+      "chart corrections",
+      "ledger"
+    ]
+  },
+  {
+    "id": "r_gaugepage",
+    "catalogId": "CAT-2001-14420",
+    "title": "Harlow Inlet tide gauge, station page",
+    "date": "2001–",
+    "creator": "Tides program",
+    "collection": "Web resources",
+    "type": "web",
+    "availability": {
+      "mode": "external",
+      "url": "https://tides.example.gov/stations/harlow-inlet",
+      "domain": "tides.example.gov",
+      "linkStatus": "ok",
+      "linkCheckedAt": "2026-10-20T06:00:00Z",
+      "snapshotAt": "2026-10-12T15:20:00Z"
+    },
+    "description": "Live station page with monthly data pages and datums.",
+    "keywords": [
+      "tide gauge",
+      "water level"
+    ]
+  },
+  {
+    "id": "r_minutes1985",
+    "catalogId": "CAT-1985-00650",
+    "title": "Harbor commission minutes, March 1985",
+    "date": "1985",
+    "creator": "Harbor Commission",
+    "collection": "Web resources",
+    "type": "web",
+    "availability": {
+      "mode": "external",
+      "url": "https://archive.example.org/harbor-commission/1985-03",
+      "domain": "archive.example.org",
+      "linkStatus": "broken",
+      "linkCheckedAt": "2026-10-20T06:00:00Z",
+      "snapshotAt": "2026-10-02T13:05:00Z",
+      "brokenSince": "2026-10-20"
+    },
+    "description": "Digitized meeting minutes; item 7 approves channel deepening.",
+    "keywords": [
+      "minutes",
+      "dredging",
+      "1985"
+    ]
+  },
+  {
+    "id": "r_satellite",
+    "catalogId": "CAT-2003-00900",
+    "title": "Satellite scene archive, coastal county, 2003–2019",
+    "date": "2003–2019",
+    "creator": "Earth imagery program",
+    "collection": "Web resources",
+    "type": "web",
+    "availability": {
+      "mode": "external",
+      "url": "https://imagery.example.gov/archive/coastal-county",
+      "domain": "imagery.example.gov",
+      "linkStatus": "ok",
+      "linkCheckedAt": "2026-10-20T06:00:00Z"
+    },
+    "description": "Searchable archive of satellite scenes covering the county coastline.",
+    "keywords": [
+      "satellite",
+      "imagery"
+    ]
+  },
+  {
+    "id": "r_mariners1974",
+    "catalogId": "CAT-1974-05521",
+    "title": "Notice to mariners: shoaling at Harlow Inlet",
+    "date": "1974",
+    "creator": "Hydrographic Office",
+    "collection": "Web resources",
+    "type": "web",
+    "availability": {
+      "mode": "external",
+      "url": "https://notices.example.gov/1974/harlow-inlet-shoaling",
+      "domain": "notices.example.gov",
+      "linkStatus": "ok",
+      "linkCheckedAt": "2026-10-20T06:00:00Z",
+      "snapshotAt": "2026-09-28T10:00:00Z"
+    },
+    "description": "Notice reporting shoaling in the inlet channel.",
+    "keywords": [
+      "notice to mariners",
+      "shoaling"
+    ]
+  },
+  {
+    "id": "r_nourishment",
+    "catalogId": "CAT-2010-00321",
+    "title": "Beach nourishment project page",
+    "date": "2010",
+    "creator": "County coastal office",
+    "collection": "Web resources",
+    "type": "web",
+    "availability": {
+      "mode": "external",
+      "url": "https://county.example.gov/coast/nourishment-2010",
+      "domain": "county.example.gov",
+      "linkStatus": "ok",
+      "linkCheckedAt": "2026-10-20T06:00:00Z"
+    },
+    "description": "Project page for the 2010 nourishment south of the inlet.",
+    "keywords": [
+      "nourishment"
+    ]
+  },
+  {
+    "id": "r_logbooks",
+    "catalogId": "CAT-1984-90014",
+    "title": "Dredge logbooks, 1984–1989",
+    "date": "1984–1989",
+    "creator": "Harbor Commission",
+    "collection": "Records Center",
+    "type": "physical",
+    "availability": {
+      "mode": "physical",
+      "location": "Records Center · box 14",
+      "retrieval": {
+        "status": "requested",
+        "requestedBy": "u_daniel",
+        "requestedAt": "2026-10-18T13:00:00Z"
+      }
+    },
+    "description": "Daily dredge logs including location and volume removed.",
+    "keywords": [
+      "dredge log",
+      "volumes"
+    ]
+  },
+  {
+    "id": "r_cores",
+    "catalogId": "CAT-1979-90002",
+    "title": "Sediment core logs",
+    "date": "1979",
+    "creator": "Coastal Engineering Lab",
+    "collection": "Records Center",
+    "type": "physical",
+    "availability": {
+      "mode": "physical",
+      "location": "Records Center · box 22"
+    },
+    "description": "Paper logs for vibracores taken across the spit.",
+    "keywords": [
+      "sediment cores"
+    ]
+  },
+  {
+    "id": "r_negatives1962",
+    "catalogId": "CAT-1962-90031",
+    "title": "Original aerial negatives, 1962 flight",
+    "date": "1962",
+    "creator": "Coastal Imagery Collection",
+    "collection": "Cold storage",
+    "type": "physical",
+    "availability": {
+      "mode": "physical",
+      "location": "Cold storage · can 3"
+    },
+    "description": "",
+    "keywords": []
+  }
+]

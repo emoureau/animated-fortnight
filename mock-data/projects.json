@@ -1,0 +1,37 @@
+[
+  {
+    "id": "p_harlow",
+    "name": "Harlow Inlet shoreline study",
+    "shortCode": "HI",
+    "description": "Why has the north spit at Harlow Inlet retreated since 1962?",
+    "memberIds": [
+      "u_you",
+      "u_maya",
+      "u_daniel",
+      "u_priya"
+    ],
+    "updatedAt": "2026-10-21T14:02:00Z"
+  },
+  {
+    "id": "p_marsh",
+    "name": "Back-barrier marsh loss",
+    "shortCode": "BM",
+    "description": "Marsh edge change behind the barrier island, 1970–present.",
+    "memberIds": [
+      "u_you",
+      "u_maya"
+    ],
+    "updatedAt": "2026-10-14T09:30:00Z"
+  },
+  {
+    "id": "p_jetty",
+    "name": "South jetty condition archive",
+    "shortCode": "SJ",
+    "description": "Inspection history for the south jetty.",
+    "memberIds": [
+      "u_you",
+      "u_priya"
+    ],
+    "updatedAt": "2026-09-30T16:45:00Z"
+  }
+]

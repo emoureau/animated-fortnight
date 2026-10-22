@@ -1,0 +1,66 @@
+[
+  {
+    "id": "f_morph",
+    "projectId": "p_harlow",
+    "name": "Inlet morphology",
+    "parentId": null,
+    "recordIds": [
+      "r_aerial1962",
+      "r_profiles1978",
+      "r_shoreline",
+      "r_mosaic1996",
+      "r_changerates",
+      "r_chart1971",
+      "r_chart1988",
+      "r_sediment1996"
+    ]
+  },
+  {
+    "id": "f_storms",
+    "projectId": "p_harlow",
+    "name": "Storm events",
+    "parentId": null,
+    "recordIds": [
+      "r_stormreport1991",
+      "r_oblique1991",
+      "r_dunerepair1992",
+      "r_oralhistory",
+      "r_overwashmap1992"
+    ]
+  },
+  {
+    "id": "f_storms_1991",
+    "projectId": "p_harlow",
+    "name": "1991 nor’easter",
+    "parentId": "f_storms",
+    "recordIds": [
+      "r_stormreport1991",
+      "r_oblique1991",
+      "r_overwashmap1992"
+    ]
+  },
+  {
+    "id": "f_dredging",
+    "projectId": "p_harlow",
+    "name": "Dredging and permits",
+    "parentId": null,
+    "recordIds": [
+      "r_margin1987",
+      "r_permit1985",
+      "r_minutes1985",
+      "r_logbooks",
+      "r_drawings1985"
+    ]
+  },
+  {
+    "id": "f_unsorted",
+    "projectId": "p_harlow",
+    "name": "Unsorted",
+    "parentId": null,
+    "recordIds": [
+      "r_gaugepage",
+      "r_waterlevels",
+      "r_drone2019"
+    ]
+  }
+]

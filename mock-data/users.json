@@ -1,0 +1,27 @@
+[
+  {
+    "id": "u_you",
+    "name": "Sam Rivera",
+    "initials": "SR",
+    "isCurrentUser": true,
+    "dataColor": "person-1"
+  },
+  {
+    "id": "u_maya",
+    "name": "Maya Okafor",
+    "initials": "MO",
+    "dataColor": "person-2"
+  },
+  {
+    "id": "u_daniel",
+    "name": "Daniel Reyes",
+    "initials": "DR",
+    "dataColor": "person-3"
+  },
+  {
+    "id": "u_priya",
+    "name": "Priya Natarajan",
+    "initials": "PN",
+    "dataColor": "person-4"
+  }
+]

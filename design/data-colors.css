@@ -1,0 +1,58 @@
+/*
+  Proposed "data" color tokens for ui-layer.
+  Data colors carry identity or category (people, the AI assistant, highlights),
+  never meaning. Semantic colors (primary, secondary, success, warning, error, info)
+  keep their meaning only.
+
+  Values point at Tailwind 4's base palette, with the oklch value as a fallback
+  in case Tailwind tree-shakes the unused theme variable.
+
+  Add to ui-layer's main.css after the existing :root and .dark blocks.
+*/
+
+:root {
+  /* fills (avatars, cursors, carets): same in both themes, labels are always steel-900 */
+  --ui-data-person-1: var(--color-teal-300, oklch(85.5% 0.138 181.071));
+  --ui-data-person-2: var(--color-orange-300, oklch(83.7% 0.128 66.29));
+  --ui-data-person-3: var(--color-lime-400, oklch(84.1% 0.238 128.85));
+  --ui-data-person-4: var(--color-pink-400, oklch(71.8% 0.202 349.761));
+  --ui-data-ai: var(--color-violet-400, oklch(70.2% 0.183 293.541));
+  --ui-data-label: var(--ui-color-neutral-900);
+
+  /* text and outlines in each data color, light theme: 700 steps hold 4.5:1 on white */
+  --ui-data-person-1-text: var(--color-teal-700, oklch(51.1% 0.096 186.391));
+  --ui-data-person-2-text: var(--color-orange-700, oklch(55.3% 0.195 38.402));
+  --ui-data-person-3-text: var(--color-lime-700, oklch(53.2% 0.157 131.589));
+  --ui-data-person-4-text: var(--color-pink-700, oklch(52.5% 0.223 3.958));
+  --ui-data-ai-text: var(--color-violet-700, oklch(49.1% 0.27 292.581));
+
+  /* highlighter for cited regions on page images */
+  --ui-data-highlight: var(--color-yellow-200, oklch(94.5% 0.129 101.54));
+  --ui-data-highlight-outline: var(--color-yellow-600, oklch(68.1% 0.162 75.834));
+}
+
+.dark {
+  --ui-data-person-1-text: var(--color-teal-300, oklch(85.5% 0.138 181.071));
+  --ui-data-person-2-text: var(--color-orange-300, oklch(83.7% 0.128 66.29));
+  --ui-data-person-3-text: var(--color-lime-300, oklch(89.7% 0.196 126.665));
+  --ui-data-person-4-text: var(--color-pink-300, oklch(82.3% 0.12 346.018));
+  --ui-data-ai-text: var(--color-violet-300, oklch(81.1% 0.111 293.571));
+  --ui-data-highlight: var(--color-yellow-300, oklch(90.5% 0.182 98.111));
+}
+
+/* Utilities: bg-person-1, text-person-1-text, border-ai, and so on */
+@theme inline {
+  --color-person-1: var(--ui-data-person-1);
+  --color-person-2: var(--ui-data-person-2);
+  --color-person-3: var(--ui-data-person-3);
+  --color-person-4: var(--ui-data-person-4);
+  --color-person-1-text: var(--ui-data-person-1-text);
+  --color-person-2-text: var(--ui-data-person-2-text);
+  --color-person-3-text: var(--ui-data-person-3-text);
+  --color-person-4-text: var(--ui-data-person-4-text);
+  --color-ai: var(--ui-data-ai);
+  --color-ai-text: var(--ui-data-ai-text);
+  --color-data-label: var(--ui-data-label);
+  --color-highlight: var(--ui-data-highlight);
+  --color-highlight-outline: var(--ui-data-highlight-outline);
+}

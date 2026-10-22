@@ -1,0 +1,120 @@
+/* ---------------------------------------------------------------
+   GRANITE theme: a vendored copy of the design system's Nuxt UI setup
+   (design/design-system-README.md, "Setup in a Nuxt 4 app or layer").
+   Treat it as the ui-layer: don't edit to restyle components. Request
+   theme changes in docs/ui-layer-requests.md.
+   --------------------------------------------------------------- */
+
+@import "tailwindcss";
+@import "@nuxt/ui";
+@import "./data-colors.css";
+
+@theme static {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-azure-50: oklch(97.0% 0.011 250.0);
+  --color-azure-100: oklch(93.2% 0.025 250.8);
+  --color-azure-200: oklch(88.2% 0.046 251.6);
+  --color-azure-300: oklch(80.9% 0.081 252.4);
+  --color-azure-400: oklch(70.7% 0.128 253.2);
+  --color-azure-500: oklch(62.3% 0.166 254.0);
+  --color-azure-600: oklch(54.6% 0.184 258.0);
+  --color-azure-700: oklch(48.8% 0.182 259.9);
+  --color-azure-800: oklch(42.4% 0.150 259.2);
+  --color-azure-900: oklch(37.9% 0.113 257.2);
+  --color-azure-950: oklch(28.2% 0.070 258.0);
+  --color-aqua-50: oklch(98.4% 0.015 204.1);
+  --color-aqua-100: oklch(95.6% 0.035 210.2);
+  --color-aqua-200: oklch(91.7% 0.060 214.2);
+  --color-aqua-300: oklch(86.5% 0.090 218.0);
+  --color-aqua-400: oklch(78.9% 0.108 220.0);
+  --color-aqua-500: oklch(71.5% 0.108 222.0);
+  --color-aqua-600: oklch(60.9% 0.097 224.0);
+  --color-aqua-700: oklch(52.0% 0.083 226.0);
+  --color-aqua-800: oklch(45.0% 0.068 228.0);
+  --color-aqua-900: oklch(39.8% 0.058 230.0);
+  --color-aqua-950: oklch(30.2% 0.045 232.0);
+  --color-steel-50: oklch(98.4% 0.0015 252.0);
+  --color-steel-100: oklch(96.8% 0.003 252.6);
+  --color-steel-200: oklch(92.9% 0.005 253.2);
+  --color-steel-300: oklch(86.9% 0.008 253.8);
+  --color-steel-400: oklch(70.4% 0.013 254.4);
+  --color-steel-500: oklch(55.4% 0.015 255.0);
+  --color-steel-600: oklch(44.6% 0.014 255.6);
+  --color-steel-700: oklch(37.2% 0.014 256.2);
+  --color-steel-800: oklch(27.9% 0.013 256.8);
+  --color-steel-900: oklch(20.8% 0.012 257.4);
+  --color-steel-950: oklch(12.9% 0.010 258.0);
+  --color-jade-50: oklch(97.9% 0.019 166.1);
+  --color-jade-100: oklch(95.0% 0.047 163.1);
+  --color-jade-200: oklch(90.5% 0.084 164.2);
+  --color-jade-300: oklch(84.5% 0.129 165.0);
+  --color-jade-400: oklch(76.5% 0.159 163.2);
+  --color-jade-500: oklch(69.6% 0.152 162.5);
+  --color-jade-600: oklch(59.6% 0.129 163.2);
+  --color-jade-700: oklch(50.8% 0.106 165.6);
+  --color-jade-800: oklch(43.2% 0.086 166.9);
+  --color-jade-900: oklch(37.8% 0.069 168.9);
+  --color-jade-950: oklch(26.2% 0.046 172.6);
+  --color-ochre-50: oklch(98.7% 0.020 95.3);
+  --color-ochre-100: oklch(96.2% 0.053 95.6);
+  --color-ochre-200: oklch(92.4% 0.108 95.7);
+  --color-ochre-300: oklch(87.9% 0.152 91.6);
+  --color-ochre-400: oklch(82.8% 0.170 84.4);
+  --color-ochre-500: oklch(76.9% 0.167 70.1);
+  --color-ochre-600: oklch(66.6% 0.160 58.3);
+  --color-ochre-700: oklch(55.5% 0.147 49.0);
+  --color-ochre-800: oklch(47.3% 0.123 46.2);
+  --color-ochre-900: oklch(41.4% 0.101 45.9);
+  --color-ochre-950: oklch(27.9% 0.069 45.6);
+  --color-garnet-50: oklch(97.1% 0.012 17.4);
+  --color-garnet-100: oklch(93.6% 0.029 17.7);
+  --color-garnet-200: oklch(88.5% 0.056 18.3);
+  --color-garnet-300: oklch(80.8% 0.103 19.6);
+  --color-garnet-400: oklch(70.4% 0.172 22.2);
+  --color-garnet-500: oklch(63.7% 0.213 25.3);
+  --color-garnet-600: oklch(57.7% 0.221 27.3);
+  --color-garnet-700: oklch(50.5% 0.192 27.5);
+  --color-garnet-800: oklch(44.4% 0.159 26.9);
+  --color-garnet-900: oklch(39.6% 0.127 25.7);
+  --color-garnet-950: oklch(25.8% 0.083 26.0);
+}
+
+:root {
+  --ui-radius: 0.25rem;
+  --ui-container: 80rem;
+  --ui-header-height: 4rem;
+
+  /* light mode */
+  --ui-primary: var(--ui-color-primary-700);
+  --ui-secondary: var(--ui-color-secondary-800);
+  --ui-success: var(--ui-color-success-800);
+  --ui-info: var(--ui-color-info-800);
+  --ui-warning: var(--ui-color-warning-800);
+  --ui-error: var(--ui-color-error-700);
+  --ui-text-dimmed: var(--ui-color-neutral-500);
+  --ui-text-muted: var(--ui-color-neutral-600);
+  --ui-text-toned: var(--ui-color-neutral-700);
+  --ui-text: var(--ui-color-neutral-800);
+  --ui-border-muted: var(--ui-color-neutral-300);
+  --ui-border-accented: var(--ui-color-neutral-500);
+}
+
+.dark {
+  --ui-primary: var(--ui-color-primary-400);
+  --ui-secondary: var(--ui-color-secondary-400);
+  --ui-success: var(--ui-color-success-400);
+  --ui-info: var(--ui-color-info-400);
+  --ui-warning: var(--ui-color-warning-400);
+  --ui-error: var(--ui-color-error-400);
+  --ui-text-muted: var(--ui-color-neutral-400);
+  --ui-text-toned: var(--ui-color-neutral-300);
+  --ui-text: var(--ui-color-neutral-200);
+  --ui-border-muted: var(--ui-color-neutral-700);
+  --ui-text-dimmed: var(--ui-color-neutral-400);
+  --ui-text-highlighted: var(--ui-color-neutral-50);
+  --ui-bg-inverted: var(--ui-color-neutral-50);
+  --ui-border-accented: var(--ui-color-neutral-500);
+  --ui-border-inverted: var(--ui-color-neutral-50);
+}

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "n_drivers",
+    "projectId": "p_harlow",
+    "folder": "Analysis",
+    "title": "Drivers of north-spit retreat, 1962–2019",
+    "format": "markdown-with-citations",
+    "body": "# Drivers of north-spit retreat, 1962–2019\n\n## Summary\n\nThe north spit at Harlow Inlet has moved landward across the period the catalog covers. This note sets out the drivers the team has found evidence for so far, and where the record is still thin.\n\n## 1. Channel dredging\n\nThe earliest aerial coverage shows a continuous spit with a broad dune line [@cit_01]. The beach profiles surveyed before any channel work give a usable baseline [@cit_02], and permit filings from the mid-1980s describe deepening the navigation channel along the spit’s inner edge [@cit_03]. What is missing is a survey taken after the work, to compare against the 1978 profiles. Digitized shoreline positions show the inner edge moving landward in every survey after the channel work [@cit_05], and the harbor commission’s minutes record the decision to deepen it [@cit_06].\n\n![[snippet:snp_inneredge]]\n\n## 2. Storm overwash\n\nField crews recorded overwash across the narrowest section of the spit after the October 1991 nor’easter [@cit_04].\n\n## 3. Sediment supply\n\nReduced sand reaching the spit from the north is a likely contributor, but no record in the bin supports it yet. {{needs-source}}\n",
+    "citationIds": [
+      "cit_01",
+      "cit_02",
+      "cit_03",
+      "cit_04",
+      "cit_05",
+      "cit_06"
+    ],
+    "editorIds": [
+      "u_you",
+      "u_maya",
+      "u_daniel",
+      "u_priya"
+    ],
+    "tags": [
+      "dredging",
+      "storms",
+      "aerial-imagery",
+      "draft"
+    ],
+    "createdAt": "2026-09-30T13:00:00Z",
+    "updatedAt": "2026-10-21T14:02:00Z",
+    "updatedBy": "u_daniel"
+  },
+  {
+    "id": "n_prior",
+    "projectId": "p_harlow",
+    "folder": "Literature review",
+    "title": "Prior shoreline studies",
+    "format": "markdown-with-citations",
+    "body": "# Prior shoreline studies\n\nTabulated change rates already note inner-edge retreat in the 1970s.\n",
+    "citationIds": [],
+    "editorIds": [
+      "u_maya"
+    ],
+    "tags": [],
+    "createdAt": "2026-09-20T10:00:00Z",
+    "updatedAt": "2026-10-02T10:00:00Z",
+    "updatedBy": "u_maya"
+  },
+  {
+    "id": "n_dredginghistory",
+    "projectId": "p_harlow",
+    "folder": "Literature review",
+    "title": "Dredging history",
+    "format": "markdown-with-citations",
+    "body": "# Dredging history\n\n[Section to write]\n",
+    "citationIds": [],
+    "editorIds": [
+      "u_daniel"
+    ],
+    "tags": [
+      "dredging"
+    ],
+    "createdAt": "2026-09-22T10:00:00Z",
+    "updatedAt": "2026-10-05T10:00:00Z",
+    "updatedBy": "u_daniel"
+  },
+  {
+    "id": "n_timeline",
+    "projectId": "p_harlow",
+    "folder": "Analysis",
+    "title": "Storm event timeline",
+    "format": "markdown-with-citations",
+    "body": "# Storm event timeline\n\nSee [[Drivers of north-spit retreat]] for the dredging argument.\n",
+    "citationIds": [],
+    "editorIds": [
+      "u_daniel"
+    ],
+    "tags": [
+      "storms"
+    ],
+    "createdAt": "2026-10-01T10:00:00Z",
+    "updatedAt": "2026-10-18T10:00:00Z",
+    "updatedBy": "u_daniel"
+  },
+  {
+    "id": "n_meeting1014",
+    "projectId": "p_harlow",
+    "folder": null,
+    "title": "Team meeting, Oct 14",
+    "format": "markdown-with-citations",
+    "body": "# Team meeting, Oct 14\n\n- Daniel to extend section 1 of [[Drivers of north-spit retreat]]\n",
+    "citationIds": [],
+    "editorIds": [
+      "u_you"
+    ],
+    "tags": [],
+    "createdAt": "2026-10-14T15:00:00Z",
+    "updatedAt": "2026-10-14T16:00:00Z",
+    "updatedBy": "u_you"
+  }
+]

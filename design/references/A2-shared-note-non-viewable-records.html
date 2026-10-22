@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Design reference exported from the Design canvas. Inline hex values map to design-system tokens: see docs/design-rules.md. Not production code. -->
+<meta charset="utf-8">
+<title>A2 · Shared note, non-viewable records</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#14181d}
+a{color:#64a4ee}a:hover{color:#9bc4f4}
+button,input,textarea,select{font:inherit}
+input::placeholder,textarea::placeholder{color:#9aa0a8}
+:focus-visible{outline:2px solid #64a4ee;outline-offset:2px}
+</style>
+<div style="min-height: 1040px; width: 100%; box-sizing: border-box; background: #14181d; color: #e5e8eb; font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; font-size: 14px; line-height: 20px; display: flex; flex-direction: column">
+
+<!-- App bar -->
+<header style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 10px 16px; border-bottom: 1px solid #25292f; background: #14181d">
+  <div style="display: flex; align-items: center; gap: 10px">
+    <span aria-hidden="true" style="width: 28px; height: 28px; border-radius: 6px; background: #41bde6; display: block"></span>
+    <span style="font-weight: 600; color: #f9fafb">[App name]</span>
+  </div>
+  <nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 6px; color: #9aa0a8">
+    <a href="#" style="color: #d0d4d9; text-decoration: none">Projects</a><span aria-hidden="true">/</span>
+    <a href="#" style="color: #d0d4d9; text-decoration: none">Harlow Inlet shoreline study</a><span aria-hidden="true">/</span>
+    <span style="color: #f9fafb">Notes</span>
+  </nav>
+  <label style="flex: 1 1 320px; max-width: 560px; margin-left: auto; display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 10px; box-sizing: border-box; border: 1px solid #6d737c; border-radius: 6px; background: #25292f; color: #9aa0a8">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+    <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search everything</span>
+    <input type="search" placeholder="Search projects, notes and the catalog" style="flex: 1; min-width: 0; background: transparent; border: 0; color: #e5e8eb; font-size: 14px">
+    <kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #d0d4d9; border: 1px solid #3c4148; border-radius: 4px; padding: 0 6px">⌘K</kbd>
+  </label>
+  <div style="display: flex; align-items: center; gap: 12px; margin-left: auto">
+    <div aria-label="4 people in this note" style="display: flex">
+      <span title="Maya Okafor" style="width: 28px; height: 28px; border-radius: 999px; background: oklch(83.7% 0.128 66.29); color: #14181d; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #14181d">MO</span>
+      <span title="Daniel Reyes" style="width: 28px; height: 28px; border-radius: 999px; background: oklch(84.1% 0.238 128.85); color: #14181d; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #14181d; margin-left: -8px">DR</span>
+      <span title="Priya Natarajan" style="width: 28px; height: 28px; border-radius: 999px; background: oklch(71.8% 0.202 349.761); color: #14181d; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #14181d; margin-left: -8px">PN</span>
+      <span title="You" style="width: 28px; height: 28px; border-radius: 999px; background: oklch(85.5% 0.138 181.071); color: #14181d; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #14181d; margin-left: -8px">You</span>
+    </div>
+    <button type="button" style="height: 32px; padding: 0 12px; border-radius: 6px; border: 0; background: #64a4ee; color: #14181d; font-weight: 500; cursor: pointer">Share</button>
+  </div>
+</header>
+
+<div style="display: flex; flex-wrap: wrap; flex: 1; min-height: 0">
+
+<!-- Left: note tree -->
+<aside aria-label="Project notes" style="flex: 0 1 248px; min-width: 210px; background: #25292f; border-right: 1px solid #3c4148; padding: 16px 12px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+  <span style="font-size: 12px; font-weight: 500; color: #9aa0a8; padding: 0 8px 6px">Notes</span>
+  <a href="#" style="padding: 6px 8px; border-radius: 6px; color: #d0d4d9; text-decoration: none">Prior shoreline studies</a>
+  <a href="#" style="padding: 6px 8px; border-radius: 6px; color: #d0d4d9; text-decoration: none">Dredging history</a>
+  <a href="#" aria-current="page" style="padding: 6px 8px; border-radius: 6px; background: #3c4148; color: #f9fafb; font-weight: 500; text-decoration: none">Drivers of north-spit retreat</a>
+  <a href="#" style="padding: 6px 8px; border-radius: 6px; color: #d0d4d9; text-decoration: none">Storm event timeline</a>
+  <a href="#" style="padding: 6px 8px; border-radius: 6px; color: #d0d4d9; text-decoration: none">Team meeting, Oct 14</a>
+
+  <div style="margin-top: 16px; border-top: 1px solid #3c4148; padding-top: 16px; display: flex; flex-direction: column; gap: 8px">
+    <span style="font-size: 12px; font-weight: 500; color: #9aa0a8; padding: 0 8px">Sources in this note</span>
+    <span style="display: flex; align-items: center; gap: 8px; padding: 0 8px; color: #d0d4d9">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+      <span style="flex: 1">Opens here</span><span>1</span></span>
+    <span style="display: flex; align-items: center; gap: 8px; padding: 0 8px; color: #d0d4d9">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>
+      <span style="flex: 1">Download only</span><span>1</span></span>
+    <span style="display: flex; align-items: center; gap: 8px; padding: 0 8px; color: #d0d4d9">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg>
+      <span style="flex: 1">External site</span><span>1</span></span>
+    <span style="padding: 4px 8px 0; font-size: 12px; line-height: 18px; color: #9aa0a8">Readers see snippets for anything that can’t open here.</span>
+  </div>
+</aside>
+
+<!-- Center: editor -->
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+  <div role="toolbar" aria-label="Formatting" style="display: flex; align-items: center; gap: 4px; flex-wrap: wrap; padding: 8px 16px; border-bottom: 1px solid #25292f">
+    <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 1px solid #3c4148; background: transparent; color: #e5e8eb; cursor: pointer">Heading 2</button>
+    <button type="button" aria-label="Bold" style="width: 32px; height: 32px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; font-weight: 600; cursor: pointer">B</button>
+    <button type="button" aria-label="Italic" style="width: 32px; height: 32px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; font-style: italic; cursor: pointer">I</button>
+    <span aria-hidden="true" style="width: 1px; height: 20px; background: #3c4148; margin: 0 6px"></span>
+    <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 0; background: rgba(95,202,234,0.14); color: #5fcaea; font-weight: 500; display: flex; align-items: center; gap: 6px; cursor: pointer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4H6v16h3M15 4h3v16h-3"></path></svg>
+      Cite record <kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #d0d4d9">[[</kbd></button>
+    <div style="margin-left: auto; display: flex; align-items: center; gap: 6px; color: #9aa0a8">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#21d195" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>
+      Saved · just now
+    </div>
+  </div>
+
+  <article style="max-width: 70ch; width: 100%; box-sizing: content-box; margin: 0 auto; padding: 40px 32px 64px; font-size: 18px; line-height: 30px; color: #e5e8eb">
+    <h1 style="margin: 0 0 8px; font-size: 32px; line-height: 40px; font-weight: 600; letter-spacing: -0.01em; color: #f9fafb">Drivers of north-spit retreat, 1962–2019</h1>
+    <p style="margin: 0 0 32px; font-size: 14px; line-height: 20px; color: #9aa0a8">Maya Okafor, Daniel Reyes, Priya Natarajan and you · 3 citations</p>
+
+    <h2 style="margin: 0 0 8px; font-size: 22px; line-height: 30px; font-weight: 600; color: #f9fafb">1. Channel dredging</h2>
+    <p style="margin: 0 0 24px">The earliest aerial coverage shows a continuous spit
+      <a href="#" style="display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; border: 1px solid rgba(95,202,234,0.35); background: rgba(95,202,234,0.12); color: #5fcaea; font-size: 15px; line-height: 24px; text-decoration: none; white-space: nowrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="M21 16l-5-5-9 9"></path></svg>Aerial photograph, 1962</a>.
+      Digitized shoreline positions show the inner edge moving landward in every survey after the channel work
+      <a href="#" aria-describedby="record-panel" style="display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; border: 1px solid #5fcaea; background: rgba(95,202,234,0.24); color: #b6effc; font-size: 15px; line-height: 24px; text-decoration: none; white-space: nowrap">Shoreline positions, 1962–2019 · layer “inner_edge”<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Download only"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg></a>,
+      and the harbor commission’s published minutes record the decision to deepen it
+      <a href="#" style="display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; border: 1px solid rgba(95,202,234,0.35); background: rgba(95,202,234,0.12); color: #5fcaea; font-size: 15px; line-height: 24px; text-decoration: none; white-space: nowrap">Commission minutes, Mar 1985 · item 7<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="External site"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></a>.</p>
+
+    <!-- Snippet block embedded in the note -->
+    <figure style="margin: 0 0 28px; border-radius: 8px; border: 1px solid #3c4148; background: #25292f; overflow: hidden; font-size: 14px; line-height: 20px">
+      <div role="img" aria-label="Snippet: map screenshot of shoreline lines" style="height: 150px; background: #3c4148; position: relative; overflow: hidden">
+        <svg aria-hidden="true" width="100%" height="150" viewBox="0 0 600 150" preserveAspectRatio="none" style="display: block"><path d="M0 40 C 120 30, 240 60, 360 50 S 520 30, 600 45" stroke="#9aa0a8" stroke-width="2" fill="none"></path><path d="M0 70 C 120 64, 240 92, 360 86 S 520 70, 600 80" stroke="oklch(83.7% 0.128 66.29)" stroke-width="2" fill="none"></path><path d="M0 104 C 120 98, 240 128, 360 120 S 520 106, 600 116" stroke="oklch(71.8% 0.202 349.761)" stroke-width="2" fill="none"></path></svg>
+        <span style="position: absolute; left: 8px; top: 8px; display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; background: #14181d; color: #d0d4d9; font-size: 12px">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 2v14a2 2 0 0 0 2 2h14M2 6h14a2 2 0 0 1 2 2v14"></path></svg>
+          Snippet · screenshot</span>
+      </div>
+      <figcaption style="padding: 10px 12px; display: flex; gap: 12px; align-items: flex-start">
+        <span style="flex: 1; color: #d0d4d9">Inner-edge lines for 1962, 1987 and 2019, exported from desktop GIS. <span style="color: #9aa0a8">Added by Maya Okafor · Oct 16 · not part of the catalog record</span></span>
+        <a href="#" style="font-size: 12px; white-space: nowrap">Source record</a>
+      </figcaption>
+    </figure>
+
+    <h2 style="margin: 0 0 8px; font-size: 22px; line-height: 30px; font-weight: 600; color: #f9fafb">2. Storm overwash</h2>
+    <p style="margin: 0 0 4px">Field crews recorded overwash across the narrowest section after the October 1991 nor’easter. Water levels for that week come from the inlet tide gauge <span style="color: #5fcaea">[[tide gauge</span><span style="display: inline-block; width: 2px; height: 22px; background: oklch(85.5% 0.138 181.071); vertical-align: -4px"></span></p>
+
+    
+    <div style="position: relative; height: 0">
+      <div role="dialog" aria-label="Cite a record" style="position: absolute; top: 4px; left: 80px; width: 500px; z-index: 2; background: #25292f; border: 1px solid #3c4148; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.4); font-size: 14px; line-height: 20px; overflow: hidden">
+        <div style="display: flex; align-items: center; gap: 4px; padding: 8px; border-bottom: 1px solid #3c4148">
+          <button type="button" aria-pressed="false" style="height: 28px; padding: 0 10px; border-radius: 6px; border: 0; background: transparent; color: #d0d4d9; cursor: pointer">Project bin</button>
+          <button type="button" aria-pressed="true" style="height: 28px; padding: 0 10px; border-radius: 6px; border: 0; background: #3c4148; color: #f9fafb; font-weight: 500; cursor: pointer">Whole catalog</button>
+          <span style="margin-left: auto; font-size: 12px; color: #9aa0a8">3 matches</span>
+        </div>
+        <div role="listbox" aria-label="Matching records" style="padding: 6px">
+          <div role="option" aria-selected="true" style="display: flex; gap: 10px; padding: 8px; border-radius: 6px; background: #3c4148">
+            <span style="flex: 1; min-width: 0">
+              <span style="display: block; color: #f9fafb; font-weight: 500">Harlow Inlet tide gauge, station page</span>
+              <span style="display: block; font-size: 12px; color: #d0d4d9">Web resource · <span style="font-family: 'IBM Plex Mono', monospace">CAT-2001-14420</span></span>
+            </span>
+            <span style="align-self: center; display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; border: 1px solid #6d737c; color: #e5e8eb; font-size: 12px; white-space: nowrap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg>External site</span>
+          </div>
+          <div role="option" aria-selected="false" style="display: flex; gap: 10px; padding: 8px; border-radius: 6px">
+            <span style="flex: 1; min-width: 0">
+              <span style="display: block; color: #e5e8eb">Tide gauge hourly water levels, 1978–2019</span>
+              <span style="display: block; font-size: 12px; color: #9aa0a8">Dataset · .nc · 310 MB · <span style="font-family: 'IBM Plex Mono', monospace">CAT-2019-02207</span></span>
+            </span>
+            <span style="align-self: center; display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; border: 1px solid #3c4148; color: #d0d4d9; font-size: 12px; white-space: nowrap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>Download</span>
+          </div>
+          <div role="option" aria-selected="false" style="display: flex; gap: 10px; padding: 8px; border-radius: 6px">
+            <span style="flex: 1; min-width: 0">
+              <span style="display: block; color: #e5e8eb">Tide gauge installation report, 1978</span>
+              <span style="display: block; font-size: 12px; color: #9aa0a8">PDF · 22 pp. · <span style="font-family: 'IBM Plex Mono', monospace">CAT-1978-00981</span></span>
+            </span>
+            <span style="align-self: center; display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; border: 1px solid #3c4148; color: #d0d4d9; font-size: 12px; white-space: nowrap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg>Opens here</span>
+          </div>
+        </div>
+        <div style="padding: 10px 12px; border-top: 1px solid #3c4148; display: flex; flex-direction: column; gap: 8px; background: #14181d">
+          <label style="display: flex; align-items: center; gap: 8px">
+            <span style="font-size: 12px; font-weight: 500; color: #d0d4d9; white-space: nowrap">Where in it?</span>
+            <input type="text" value="Monthly data page, Oct 1991" style="flex: 1; min-width: 0; height: 30px; padding: 0 8px; border-radius: 6px; border: 1px solid #6d737c; background: #25292f; color: #e5e8eb; font-size: 13px">
+          </label>
+          <span style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #9aa0a8">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#21d195" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>
+            A snapshot of the page is saved with the citation in case the link changes.</span>
+        </div>
+      </div>
+    </div>
+    
+
+    <p style="margin: 300px 0 0; font-size: 14px; color: #9aa0a8">&nbsp;</p>
+  </article>
+</main>
+
+<!-- Right: record panel for a download-only record -->
+<aside id="record-panel" aria-label="Citation details" style="flex: 0 1 340px; min-width: 280px; background: #25292f; border-left: 1px solid #3c4148; box-sizing: border-box; padding: 16px; display: flex; flex-direction: column; gap: 16px">
+  <div>
+    <span style="display: inline-flex; align-items: center; gap: 4px; padding: 0 6px; border-radius: 4px; border: 1px solid #6d737c; color: #e5e8eb; font-size: 12px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>Download only</span>
+    <h3 style="margin: 6px 0 0; font-size: 16px; line-height: 24px; font-weight: 600; color: #f9fafb">Shoreline positions, north spit, 1962–2019</h3>
+    <p style="margin: 2px 0 0; color: #9aa0a8">Esri shapefile in .zip · 48 MB · <span style="font-family: 'IBM Plex Mono', monospace">CAT-2019-08812</span></p>
+  </div>
+
+  <div style="display: flex; gap: 12px; align-items: center; padding: 12px; border-radius: 8px; background: #14181d; border: 1px solid #3c4148">
+    <span aria-hidden="true" style="width: 44px; height: 52px; flex: none; border-radius: 4px; background: #3c4148; color: #f9fafb; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; display: flex; align-items: center; justify-content: center">.shp</span>
+    <span style="flex: 1; color: #d0d4d9">Can’t be shown in the browser. Open it in a GIS tool, or use the team’s snippets below.</span>
+  </div>
+  <div style="display: flex; gap: 8px">
+    <button type="button" style="flex: 1; height: 32px; border-radius: 6px; border: 0; background: #64a4ee; color: #14181d; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>Download</button>
+    <button type="button" style="flex: 1; height: 32px; border-radius: 6px; border: 1px solid #6d737c; background: transparent; color: #e5e8eb; cursor: pointer">Copy file path</button>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 6px">
+    <span style="font-size: 12px; font-weight: 500; color: #9aa0a8">Cited at</span>
+    <span style="padding: 6px 8px; border-radius: 6px; background: #14181d; border: 1px solid #3c4148; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #e5e8eb">layer inner_edge · years 1962, 1987, 2019</span>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 6px">
+    <span style="font-size: 12px; font-weight: 500; color: #9aa0a8">What’s inside (from the catalog)</span>
+    <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #d0d4d9">
+      <li style="display: flex; justify-content: space-between"><span>inner_edge.shp</span><span style="color: #9aa0a8">21 MB</span></li>
+      <li style="display: flex; justify-content: space-between"><span>outer_edge.shp</span><span style="color: #9aa0a8">19 MB</span></li>
+      <li style="display: flex; justify-content: space-between"><span>transects.shp</span><span style="color: #9aa0a8">6 MB</span></li>
+      <li style="display: flex; justify-content: space-between"><span>README.txt</span><span style="color: #9aa0a8">4 KB</span></li>
+    </ul>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid #3c4148; padding-top: 14px">
+    <div style="display: flex; align-items: center; justify-content: space-between">
+      <span style="font-size: 12px; font-weight: 500; color: #9aa0a8">Team snippets · 2</span>
+      <button type="button" style="height: 28px; padding: 0 8px; border-radius: 6px; border: 1px solid #6d737c; background: transparent; color: #e5e8eb; font-size: 12px; cursor: pointer">+ Add snippet</button>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+      <div style="border-radius: 6px; border: 1px solid #3c4148; overflow: hidden; background: #14181d">
+        <div aria-hidden="true" style="height: 56px; background: #3c4148"></div>
+        <span style="display: block; padding: 6px 8px; font-size: 12px; line-height: 16px; color: #d0d4d9">Inner-edge lines · Maya</span>
+      </div>
+      <div style="border-radius: 6px; border: 1px solid #3c4148; overflow: hidden; background: #14181d">
+        <div aria-hidden="true" style="height: 56px; background: #3c4148; padding: 8px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px"><span style="height: 3px; background: #9aa0a8; display: block"></span><span style="height: 3px; background: #9aa0a8; display: block; width: 70%"></span><span style="height: 3px; background: #9aa0a8; display: block; width: 85%"></span></div>
+        <span style="display: block; padding: 6px 8px; font-size: 12px; line-height: 16px; color: #d0d4d9">README excerpt · Daniel</span>
+      </div>
+    </div>
+  </div>
+</aside>
+
+</div>
+</div>
+</body>
+</html>
